@@ -5,7 +5,8 @@
   "scripts": {
     "build:html": "node scripts/build-html.mjs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_48e8f3ce41e0640"
   },
   "devDependencies": {
     "storybook": "^10.3.5",
