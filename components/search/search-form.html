@@ -1,0 +1,56 @@
+          <form class="ws-search" action="#" method="get" role="search" aria-label="Buscador de retiros">
+            <div class="ws-search__bar glass">
+              <label class="ws-search__segment ws-search__segment--where">
+                <span class="ws-search__label">Donde</span>
+                <input
+                  class="ws-search__input"
+                  type="search"
+                  name="donde"
+                  placeholder="Busca el destino"
+                  autocomplete="off"
+                />
+              </label>
+              <span class="ws-search__divider" aria-hidden="true"></span>
+              <label class="ws-search__segment ws-search__segment--arrival">
+                <span class="ws-search__label">Llegada</span>
+                <input
+                  class="ws-search__input"
+                  type="text"
+                  name="llegada"
+                  placeholder="Añade fecha"
+                  autocomplete="off"
+                />
+              </label>
+              <span class="ws-search__divider" aria-hidden="true"></span>
+              <label class="ws-search__segment ws-search__segment--departure">
+                <span class="ws-search__label">Salida</span>
+                <input
+                  class="ws-search__input"
+                  type="text"
+                  name="salida"
+                  placeholder="Añade fecha"
+                  autocomplete="off"
+                />
+              </label>
+              <span class="ws-search__divider" aria-hidden="true"></span>
+              <label class="ws-search__segment ws-search__segment--guests">
+                <span class="ws-search__label">Personas</span>
+                <select class="ws-search__input ws-search__select" name="personas" aria-label="Número de personas">
+                  <option value="" selected>Añade personas</option>
+                  <option value="1">1 persona</option>
+                  <option value="2">2 personas</option>
+                  <option value="3">3 personas</option>
+                  <option value="4">4 personas</option>
+                  <option value="5">5+ personas</option>
+                </select>
+              </label>
+              <button class="ws-search__submit" type="submit" aria-label="Buscar retiros">
+                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>

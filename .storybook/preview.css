@@ -1,0 +1,5 @@
+/* Fondo y aire para previsualizar bloques sueltos */
+#storybook-root,
+.sb-show-main {
+  min-height: 100%;
+}

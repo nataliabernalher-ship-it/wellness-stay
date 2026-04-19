@@ -9,6 +9,9 @@ Desktop.ini
 *.swp
 *.swo
 
+# Node
+node_modules/
+
 # Logs
 *.log
 npm-debug.log*
@@ -19,3 +22,6 @@ npm-debug.log*
 
 # Cursor (reglas locales; quita la siguiente línea si quieres versionarlas)
 .cursor/
+
+*storybook.log
+storybook-static
