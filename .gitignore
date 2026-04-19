@@ -17,5 +17,5 @@ npm-debug.log*
 .env
 .env.*
 
-# Cursor (opcional: quita la siguiente línea si quieres versionar reglas del proyecto)
-# .cursor/
+# Cursor (reglas locales; quita la siguiente línea si quieres versionarlas)
+.cursor/
