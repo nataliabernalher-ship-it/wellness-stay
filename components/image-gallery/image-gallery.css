@@ -1,0 +1,100 @@
+/* Figma: image_gallery — tarjeta cuadrada, overlay centrado */
+
+.ws-image-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  max-width: min(100%, 420px);
+  margin-inline: auto;
+  background-color: var(--color-neutral-200);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.ws-image-gallery[data-img="1"],
+.ws-image-gallery[data-img="mountain"] {
+  background-image: url("../../assets/card-1.jpg");
+}
+
+.ws-image-gallery[data-img="2"],
+.ws-image-gallery[data-img="beach"] {
+  background-image: url("../../assets/card-2.jpg");
+}
+
+.ws-image-gallery[data-img="3"],
+.ws-image-gallery[data-img="forest"] {
+  background-image: url("../../assets/card-3.jpg");
+}
+
+.ws-image-gallery[data-img="4"],
+.ws-image-gallery[data-img="desert"] {
+  background-image: url("../../assets/card-4.jpg");
+}
+
+.ws-image-gallery__content-card {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+}
+
+.ws-image-gallery__content-card.glass {
+  border-radius: 12px;
+  background:
+    linear-gradient(
+      var(--glass-highlight-angle, 337deg),
+      var(--glass-highlight-start, rgba(255, 255, 255, 0.12)),
+      var(--glass-highlight-end, rgba(255, 255, 255, 0.02))
+    ),
+    rgba(0, 0, 0, 0.4);
+  border: var(--glass-border-width, 1px) solid var(--glass-border-color, rgba(255, 255, 255, 0.2));
+  box-shadow: var(--glass-shadow-sm, 0 4px 16px rgba(0, 0, 0, 0.2));
+  backdrop-filter: blur(var(--glass-blur, 10px)) saturate(120%);
+  -webkit-backdrop-filter: blur(var(--glass-blur, 10px)) saturate(120%);
+}
+
+.ws-image-gallery__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+.ws-image-gallery__title {
+  margin: 0;
+  min-height: 17px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  text-align: center;
+}
+
+.ws-image-gallery__subtitle {
+  margin: 0;
+  min-height: 12px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ws-image-gallery__subtitle:hover {
+  text-decoration: underline;
+}

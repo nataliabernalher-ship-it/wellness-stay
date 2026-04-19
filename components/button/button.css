@@ -1,0 +1,59 @@
+/* Figma: botones (Button) — tokens: tokens.json → button */
+
+.btn,
+.ws-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn:active,
+.ws-button:active {
+  transform: translateY(1px);
+}
+
+.btn-primary,
+.ws-button--primary {
+  background: var(--color-primary-400);
+  color: var(--text-inverse);
+}
+
+.btn-primary:hover,
+.ws-button--primary:hover {
+  background: var(--color-primary-200);
+}
+
+.btn-primary:focus-visible,
+.ws-button--primary:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+.btn-secondary,
+.ws-button--secondary {
+  background: transparent;
+  border-color: var(--border-default);
+  color: var(--text-display);
+}
+
+.btn-secondary:hover,
+.ws-button--secondary:hover {
+  background: var(--bg-secondary);
+}
+
+.btn-wide,
+.ws-button--wide {
+  width: 100%;
+}

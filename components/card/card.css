@@ -1,0 +1,232 @@
+/* Figma: card — layout vertical, radio 12px, CTA abajo a la derecha */
+
+.cards,
+.ws-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.card,
+.ws-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 380px;
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+  isolation: isolate;
+  background-color: var(--color-neutral-200);
+}
+
+.card:hover,
+.ws-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Imagen a pantalla completa detrás del panel de texto */
+.card__media-wrap,
+.ws-card__media-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background-color: var(--color-neutral-200);
+}
+
+.card__media,
+.ws-card__media {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  z-index: 0;
+}
+
+.card__overlay,
+.ws-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(16, 24, 40, 0.42) 0%,
+    rgba(16, 24, 40, 0.08) 45%,
+    rgba(16, 24, 40, 0.35) 100%
+  );
+}
+
+.card__media[data-img="mountain"],
+.ws-card__media[data-img="mountain"] {
+  background-image: url("../../assets/card-1.jpg");
+}
+
+.card__media[data-img="beach"],
+.ws-card__media[data-img="beach"] {
+  background-image: url("../../assets/card-2.jpg");
+}
+
+.card__media[data-img="forest"],
+.ws-card__media[data-img="forest"] {
+  background-image: url("../../assets/card-3.jpg");
+}
+
+.card__media[data-img="desert"],
+.ws-card__media[data-img="desert"] {
+  background-image: url("../../assets/card-4.jpg");
+}
+
+.card-meta,
+.card__meta,
+.ws-card__meta {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: calc(100% - 24px);
+}
+
+.ws-card__meta .ws-pill {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text-display);
+  border-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.ws-card__meta .ws-pill--muted {
+  background: rgba(16, 24, 40, 0.45);
+  color: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Panel inferior: glass sobre la foto (fondo claro + blur) */
+.card__content,
+.ws-card__content {
+  position: relative;
+  z-index: 3;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  min-height: 0;
+  margin-top: auto;
+}
+
+.ws-card__content.glass {
+  border-radius: 12px 12px 0 0;
+}
+
+.ws-card__content.glass.glass--strong {
+  --glass-bg: rgba(255, 255, 255, 0.72);
+}
+
+.card__title,
+.ws-card__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--text-display);
+}
+
+.card__text,
+.ws-card__text {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text-body);
+}
+
+.card__footer,
+.ws-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.card__price,
+.ws-card__price {
+  font-size: 14px;
+  color: var(--text-body);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.card__price strong,
+.ws-card__price strong {
+  color: var(--text-display);
+  font-weight: 700;
+}
+
+.card__btn,
+.ws-card__btn {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.ws-card__btn.ws-button {
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: var(--radius-xs);
+  gap: 6px;
+}
+
+.ws-card__btn svg {
+  flex-shrink: 0;
+}
+
+.pill,
+.ws-pill {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(214, 234, 233, 0.7);
+  color: var(--text-display);
+  border: 1px solid var(--border-default);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.pill-muted,
+.ws-pill--muted {
+  background: rgba(245, 245, 245, 0.9);
+  color: var(--text-body);
+}
+
+@media (max-width: 1024px) {
+  .cards,
+  .ws-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .cards,
+  .ws-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ws-card__footer {
+    flex-wrap: wrap;
+  }
+
+  .ws-card__btn.ws-button {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+}

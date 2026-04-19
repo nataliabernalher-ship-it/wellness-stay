@@ -1,0 +1,21 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Env (si añades backend)
+.env
+.env.*
+
+# Cursor (opcional: quita la siguiente línea si quieres versionar reglas del proyecto)
+# .cursor/

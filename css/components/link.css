@@ -1,0 +1,23 @@
+/* Figma: link */
+
+.link,
+.ws-link {
+  color: var(--text-link);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link:hover,
+.ws-link:hover {
+  text-decoration: underline;
+}
+
+.ws-link--muted {
+  color: var(--text-body);
+  font-weight: 600;
+}
+
+.ws-link--muted:hover {
+  color: var(--text-display);
+  text-decoration: none;
+}

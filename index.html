@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retiro | Encuentra tu retiro de salud y bienestar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./css/components/index.css" />
+  </head>
+  <body>
+    <header class="site-header site-header--over-media">
+      <div class="site-header__wrap">
+        <nav class="ws-navigation glass" aria-label="Navegación principal">
+          <a class="ws-navigation__logo" href="#" aria-label="Inicio WellnessStay">WellnessStay.</a>
+          <div class="ws-navigation__end">
+            <a class="ws-navigation__host" href="#">Ser anfitrión</a>
+            <div class="ws-navigation__user-chip">
+              <button type="button" class="ws-navigation__menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M0 1h20v2H0zm0 5h20v2H0zm0 5h20v2H0z"
+                  />
+                </svg>
+              </button>
+              <svg
+                class="ws-navigation__avatar"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+              >
+                <circle cx="16" cy="16" r="16" fill="#ffffff" />
+                <circle cx="16" cy="13" r="4.5" fill="#777373" />
+                <path
+                  fill="#777373"
+                  d="M8 26.5c0-4.4 3.6-8 8-8s8 3.6 8 8v1.5H8V26.5z"
+                />
+                <circle cx="24" cy="10" r="3" fill="#BFA87E" />
+              </svg>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Buscador principal">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1>Encuentra tu retiro ideal de salud y bienestar</h1>
+            <p class="hero-subtitle">
+              Filtra por destino, fechas y personas. Descubre experiencias para desconectar, recargar y volver con claridad.
+            </p>
+          </div>
+
+          <form class="ws-search" action="#" method="get" role="search" aria-label="Buscador de retiros">
+            <div class="ws-search__bar glass">
+              <label class="ws-search__segment ws-search__segment--where">
+                <span class="ws-search__label">Donde</span>
+                <input
+                  class="ws-search__input"
+                  type="search"
+                  name="donde"
+                  placeholder="Busca el destino"
+                  autocomplete="off"
+                />
+              </label>
+              <span class="ws-search__divider" aria-hidden="true"></span>
+              <label class="ws-search__segment ws-search__segment--arrival">
+                <span class="ws-search__label">Llegada</span>
+                <input
+                  class="ws-search__input"
+                  type="text"
+                  name="llegada"
+                  placeholder="Añade fecha"
+                  autocomplete="off"
+                />
+              </label>
+              <span class="ws-search__divider" aria-hidden="true"></span>
+              <label class="ws-search__segment ws-search__segment--departure">
+                <span class="ws-search__label">Salida</span>
+                <input
+                  class="ws-search__input"
+                  type="text"
+                  name="salida"
+                  placeholder="Añade fecha"
+                  autocomplete="off"
+                />
+              </label>
+              <span class="ws-search__divider" aria-hidden="true"></span>
+              <label class="ws-search__segment ws-search__segment--guests">
+                <span class="ws-search__label">Personas</span>
+                <select class="ws-search__input ws-search__select" name="personas" aria-label="Número de personas">
+                  <option value="" selected>Añade personas</option>
+                  <option value="1">1 persona</option>
+                  <option value="2">2 personas</option>
+                  <option value="3">3 personas</option>
+                  <option value="4">4 personas</option>
+                  <option value="5">5+ personas</option>
+                </select>
+              </label>
+              <button class="ws-search__submit" type="submit" aria-label="Buscar retiros">
+                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="retiros" class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Retiros destacados</h2>
+              <p class="section-subtitle">Cuatro opciones populares para empezar a explorar.</p>
+            </div>
+            <a class="btn btn-secondary" href="#">Ver todos</a>
+          </div>
+
+          <div class="ws-card-grid">
+            <article class="ws-card">
+              <div class="ws-card__media-wrap">
+                <div class="ws-card__media" aria-hidden="true" data-img="mountain"></div>
+                <div class="ws-card__overlay" aria-hidden="true"></div>
+                <div class="ws-card__meta">
+                  <span class="ws-pill">Meditación</span>
+                  <span class="ws-pill ws-pill--muted">5 noches</span>
+                </div>
+              </div>
+              <div class="ws-card__content glass glass--strong">
+                <h3 class="ws-card__title">Silencio en la montaña</h3>
+                <p class="ws-card__text">Respira profundo, camina consciente y vuelve a tu centro con guía diaria.</p>
+                <div class="ws-card__footer">
+                  <span class="ws-card__price"><strong>$420</strong> / persona</span>
+                  <a class="ws-card__btn ws-button ws-button--primary" href="#retiros">
+                    Reservar
+                    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        fill="currentColor"
+                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="ws-card">
+              <div class="ws-card__media-wrap">
+                <div class="ws-card__media" aria-hidden="true" data-img="beach"></div>
+                <div class="ws-card__overlay" aria-hidden="true"></div>
+                <div class="ws-card__meta">
+                  <span class="ws-pill">Yoga</span>
+                  <span class="ws-pill ws-pill--muted">3 noches</span>
+                </div>
+              </div>
+              <div class="ws-card__content glass glass--strong">
+                <h3 class="ws-card__title">Flow &amp; mar</h3>
+                <p class="ws-card__text">Sesiones al amanecer, comida consciente y descanso con sonido de olas.</p>
+                <div class="ws-card__footer">
+                  <span class="ws-card__price"><strong>$310</strong> / persona</span>
+                  <a class="ws-card__btn ws-button ws-button--primary" href="#retiros">
+                    Reservar
+                    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        fill="currentColor"
+                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="ws-card">
+              <div class="ws-card__media-wrap">
+                <div class="ws-card__media" aria-hidden="true" data-img="forest"></div>
+                <div class="ws-card__overlay" aria-hidden="true"></div>
+                <div class="ws-card__meta">
+                  <span class="ws-pill">Detox</span>
+                  <span class="ws-pill ws-pill--muted">7 noches</span>
+                </div>
+              </div>
+              <div class="ws-card__content glass glass--strong">
+                <h3 class="ws-card__title">Reinicio natural</h3>
+                <p class="ws-card__text">Rutinas suaves, nutrición y spa para recuperar energía sin extremos.</p>
+                <div class="ws-card__footer">
+                  <span class="ws-card__price"><strong>$590</strong> / persona</span>
+                  <a class="ws-card__btn ws-button ws-button--primary" href="#retiros">
+                    Reservar
+                    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        fill="currentColor"
+                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="ws-card">
+              <div class="ws-card__media-wrap">
+                <div class="ws-card__media" aria-hidden="true" data-img="desert"></div>
+                <div class="ws-card__overlay" aria-hidden="true"></div>
+                <div class="ws-card__meta">
+                  <span class="ws-pill">Mindfulness</span>
+                  <span class="ws-pill ws-pill--muted">4 noches</span>
+                </div>
+              </div>
+              <div class="ws-card__content glass glass--strong">
+                <h3 class="ws-card__title">Claridad &amp; enfoque</h3>
+                <p class="ws-card__text">Talleres prácticos para bajar el ruido mental y diseñar hábitos sostenibles.</p>
+                <div class="ws-card__footer">
+                  <span class="ws-card__price"><strong>$380</strong> / persona</span>
+                  <a class="ws-card__btn ws-button ws-button--primary" href="#retiros">
+                    Reservar
+                    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        fill="currentColor"
+                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="tipos" class="section section-muted">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Tipos de retiro</h2>
+              <p class="section-subtitle">Explora por intención: movimiento, descanso, foco o transformación.</p>
+            </div>
+          </div>
+
+          <div class="types">
+            <a class="type" href="#" aria-label="Retiros de Yoga">
+              <span class="type-img" aria-hidden="true" data-img="yoga"></span>
+              <span class="type-overlay glass glass--light">
+                <span class="type-title">Yoga</span>
+                <span class="type-sub">Energía y flexibilidad</span>
+              </span>
+            </a>
+            <a class="type" href="#" aria-label="Retiros de Meditación">
+              <span class="type-img" aria-hidden="true" data-img="meditation"></span>
+              <span class="type-overlay glass glass--light">
+                <span class="type-title">Meditación</span>
+                <span class="type-sub">Silencio y presencia</span>
+              </span>
+            </a>
+            <a class="type" href="#" aria-label="Retiros de Detox">
+              <span class="type-img" aria-hidden="true" data-img="detox"></span>
+              <span class="type-overlay glass glass--light">
+                <span class="type-title">Detox</span>
+                <span class="type-sub">Ligereza y descanso</span>
+              </span>
+            </a>
+            <a class="type" href="#" aria-label="Retiros de Naturaleza">
+              <span class="type-img" aria-hidden="true" data-img="nature"></span>
+              <span class="type-overlay glass glass--light">
+                <span class="type-title">Naturaleza</span>
+                <span class="type-sub">Senderos y aire puro</span>
+              </span>
+            </a>
+            <a class="type" href="#" aria-label="Retiros de Spa">
+              <span class="type-img" aria-hidden="true" data-img="spa"></span>
+              <span class="type-overlay glass glass--light">
+                <span class="type-title">Spa</span>
+                <span class="type-sub">Cuerpo y recuperación</span>
+              </span>
+            </a>
+            <a class="type" href="#" aria-label="Retiros de Mindfulness">
+              <span class="type-img" aria-hidden="true" data-img="mindfulness"></span>
+              <span class="type-overlay glass glass--light">
+                <span class="type-title">Mindfulness</span>
+                <span class="type-sub">Foco y calma</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section newsletter" aria-label="Suscripción a newsletter">
+        <div class="container">
+          <div class="newsletter-card glass glass--strong">
+            <div class="newsletter-copy">
+              <h2>Consejos wellness en tu inbox</h2>
+              <p class="newsletter-copy">
+                Ideas simples para dormir mejor, moverte con intención, comer más consciente y sostener hábitos que sí duran.
+              </p>
+              <ul class="newsletter-points" aria-label="Qué recibirás">
+                <li>Rutinas cortas y prácticas (5–10 min)</li>
+                <li>Guías para bajar el estrés y recuperar foco</li>
+                <li>Recomendaciones de retiros y experiencias</li>
+              </ul>
+            </div>
+
+            <form class="newsletter-form" action="#" method="post">
+              <label class="field newsletter-field">
+                <span class="field-label">Email</span>
+                <input
+                  class="field-input"
+                  name="email"
+                  type="email"
+                  inputmode="email"
+                  autocomplete="email"
+                  placeholder="tu@email.com"
+                  required
+                />
+              </label>
+              <button class="btn btn-primary" type="submit">Suscribirme</button>
+              <p class="newsletter-legal">
+                Al suscribirte aceptas recibir correos. Puedes darte de baja cuando quieras.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="ayuda" class="footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand brand-footer">
+            <img
+              class="brand-logo"
+              src="./assets/logo.svg"
+              alt="Retiro"
+              width="175"
+              height="47"
+              decoding="async"
+            />
+          </div>
+          <p class="footer-text">Buscador de retiros de salud y bienestar.</p>
+        </div>
+        <div class="footer-links" aria-label="Enlaces de ayuda">
+          <a href="#">Cómo funciona</a>
+          <a href="#">Políticas</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
