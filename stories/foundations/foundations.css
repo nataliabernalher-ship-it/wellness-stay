@@ -1,0 +1,106 @@
+/* Layout solo para documentación en Storybook */
+.ws-fdn {
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  color: var(--text-body);
+  padding: var(--space-xl);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ws-fdn__title {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-display);
+  font-size: var(--font-size-display-lg, 1.75rem);
+  font-weight: 700;
+  color: var(--text-display);
+}
+
+.ws-fdn__subtitle {
+  margin: 0 0 var(--space-lg);
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 56ch;
+}
+
+.ws-fdn__section {
+  margin-bottom: var(--space-2xl);
+}
+
+.ws-fdn__section h3 {
+  margin: 0 0 var(--space-md);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-display);
+}
+
+.ws-fdn__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: var(--space-md);
+}
+
+.ws-fdn__swatch {
+  height: 72px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-default);
+  box-shadow: var(--shadow-sm);
+}
+
+.ws-fdn__meta {
+  margin-top: var(--space-xs);
+  font-size: 11px;
+  line-height: 1.35;
+  color: var(--text-muted);
+  word-break: break-word;
+}
+
+.ws-fdn__meta strong {
+  display: block;
+  color: var(--text-body);
+  font-weight: 600;
+}
+
+.ws-fdn__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: flex-end;
+}
+
+.ws-fdn__space-bar {
+  height: 32px;
+  background: linear-gradient(90deg, var(--color-primary-200), var(--color-primary-500));
+  border-radius: 4px;
+  min-width: 4px;
+}
+
+.ws-fdn__radius-box {
+  width: 88px;
+  height: 88px;
+  background: var(--color-primary-100);
+  border: 1px solid var(--border-default);
+}
+
+.ws-fdn__shadow-box {
+  width: 120px;
+  height: 72px;
+  border-radius: var(--radius-xs);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-default);
+}
+
+.ws-fdn__type-row {
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.ws-fdn__type-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: var(--space-xs);
+}
