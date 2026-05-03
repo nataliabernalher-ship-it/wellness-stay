@@ -229,19 +229,38 @@ a {
   position: relative;
   margin-top: -96px;
   padding: 156px 0 120px;
-  background:
-    linear-gradient(180deg, rgba(16, 24, 40, 0.62), rgba(16, 24, 40, 0.28)),
-    url("./assets/hero-image.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   overflow: hidden;
+  isolation: isolate;
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero__cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(16, 24, 40, 0.62), rgba(16, 24, 40, 0.28));
+  pointer-events: none;
 }
 
 .hero::after {
   content: "";
   position: absolute;
   inset: -40px -40px auto auto;
+  z-index: 2;
   width: 420px;
   height: 420px;
   border-radius: 999px;
@@ -250,6 +269,8 @@ a {
 }
 
 .hero-grid {
+  position: relative;
+  z-index: 3;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-xl);
@@ -333,8 +354,8 @@ h2 {
   position: relative;
   background:
     linear-gradient(180deg, rgba(16, 24, 40, 0.58), rgba(16, 24, 40, 0.42)),
-    url("./assets/hero-image.jpg");
-  background-position: center;
+    url("./assets/hero-image.jpg.png");
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -479,10 +500,10 @@ h2 {
   background-image: url("./assets/card-3.jpg");
 }
 .type-img[data-img="spa"] {
-  background-image: url("./assets/card-4.jpg");
+  background-image: url("./assets/card-4.png");
 }
 .type-img[data-img="mindfulness"] {
-  background-image: url("./assets/card-4.jpg");
+  background-image: url("./assets/card-4.png");
 }
 
 .type::after {

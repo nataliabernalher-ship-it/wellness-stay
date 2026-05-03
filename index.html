@@ -52,12 +52,22 @@
 
     <main>
             <section class="hero" aria-label="Buscador principal">
+        <div class="hero__media" aria-hidden="true">
+          <img
+            class="hero__cover"
+            src="./assets/hero-image.jpg.png"
+            alt=""
+            width="1920"
+            height="1080"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero__scrim" aria-hidden="true"></div>
         <div class="container hero-grid">
           <div class="hero-copy">
             <h1>Encuentra tu retiro ideal de salud y bienestar</h1>
-            <p class="hero-subtitle">
-              Filtra por destino, fechas y personas. Descubre experiencias para desconectar, recargar y volver con claridad.
-            </p>
+          
           </div>
 
                     <form class="ws-search" action="#" method="get" role="search" aria-label="Buscador de retiros">
@@ -140,7 +150,7 @@
                   <span class="ws-pill ws-pill--muted">5 noches</span>
                 </div>
               </div>
-              <div class="ws-card__content glass glass--strong">
+              <div class="ws-card__content glass glass--light">
                 <h3 class="ws-card__title">Silencio en la montaña</h3>
                 <p class="ws-card__text">Respira profundo, camina consciente y vuelve a tu centro con guía diaria.</p>
                 <div class="ws-card__footer">
@@ -167,7 +177,7 @@
                   <span class="ws-pill ws-pill--muted">3 noches</span>
                 </div>
               </div>
-              <div class="ws-card__content glass glass--strong">
+              <div class="ws-card__content glass glass--light">
                 <h3 class="ws-card__title">Flow &amp; mar</h3>
                 <p class="ws-card__text">Sesiones al amanecer, comida consciente y descanso con sonido de olas.</p>
                 <div class="ws-card__footer">
@@ -194,7 +204,7 @@
                   <span class="ws-pill ws-pill--muted">7 noches</span>
                 </div>
               </div>
-              <div class="ws-card__content glass glass--strong">
+              <div class="ws-card__content glass glass--light">
                 <h3 class="ws-card__title">Reinicio natural</h3>
                 <p class="ws-card__text">Rutinas suaves, nutrición y spa para recuperar energía sin extremos.</p>
                 <div class="ws-card__footer">
@@ -214,14 +224,14 @@
 
             <article class="ws-card">
               <div class="ws-card__media-wrap">
-                <div class="ws-card__media" aria-hidden="true" data-img="desert"></div>
+                <div class="ws-card__media" aria-hidden="true" data-img="4"></div>
                 <div class="ws-card__overlay" aria-hidden="true"></div>
                 <div class="ws-card__meta">
                   <span class="ws-pill">Mindfulness</span>
                   <span class="ws-pill ws-pill--muted">4 noches</span>
                 </div>
               </div>
-              <div class="ws-card__content glass glass--strong">
+              <div class="ws-card__content glass glass--light">
                 <h3 class="ws-card__title">Claridad &amp; enfoque</h3>
                 <p class="ws-card__text">Talleres prácticos para bajar el ruido mental y diseñar hábitos sostenibles.</p>
                 <div class="ws-card__footer">
