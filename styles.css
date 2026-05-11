@@ -354,7 +354,7 @@ h2 {
   position: relative;
   background:
     linear-gradient(180deg, rgba(16, 24, 40, 0.58), rgba(16, 24, 40, 0.42)),
-    url("./assets/hero-image.jpg.png");
+    url("./assets/hero-image.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -500,10 +500,10 @@ h2 {
   background-image: url("./assets/card-3.jpg");
 }
 .type-img[data-img="spa"] {
-  background-image: url("./assets/card-4.png");
+  background-image: url("./assets/card-4.jpg");
 }
 .type-img[data-img="mindfulness"] {
-  background-image: url("./assets/card-4.png");
+  background-image: url("./assets/card-4.jpg");
 }
 
 .type::after {

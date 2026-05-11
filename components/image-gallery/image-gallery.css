@@ -35,7 +35,7 @@
 
 .ws-image-gallery[data-img="4"],
 .ws-image-gallery[data-img="desert"] {
-  background-image: url("../../assets/card-4.png");
+  background-image: url("../../assets/card-4.jpg");
 }
 
 .ws-image-gallery__content-card {

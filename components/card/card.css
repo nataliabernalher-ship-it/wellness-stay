@@ -86,7 +86,7 @@
 .card__media[data-img="4"],
 .ws-card__media[data-img="desert"],
 .ws-card__media[data-img="4"] {
-  background-image: url("../../assets/card-4.png");
+  background-image: url("../../assets/card-4.jpg");
 }
 
 .card-meta,
