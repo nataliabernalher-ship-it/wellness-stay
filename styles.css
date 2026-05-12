@@ -488,7 +488,7 @@ h2 {
 }
 
 .type-img[data-img="yoga"] {
-  background-image: url("./assets/card-2.jpg");
+  background-image: url("./assets/Yoga.png");
 }
 .type-img[data-img="meditation"] {
   background-image: url("./assets/card-1.jpg");
@@ -500,10 +500,10 @@ h2 {
   background-image: url("./assets/card-3.jpg");
 }
 .type-img[data-img="spa"] {
-  background-image: url("./assets/card-4.jpg");
+  background-image: url("./assets/Spa.png");
 }
 .type-img[data-img="mindfulness"] {
-  background-image: url("./assets/card-4.jpg");
+  background-image: url("./assets/mindfullness.png");
 }
 
 .type::after {
