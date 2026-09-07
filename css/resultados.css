@@ -264,7 +264,7 @@
 }
 
 .page-marketplace .ws-card-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .ws-card[hidden],
@@ -272,12 +272,6 @@
 .marketplace-empty[hidden],
 .ws-filters-panel[hidden] {
   display: none !important;
-}
-
-@media (max-width: 1100px) {
-  .page-marketplace .ws-card-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 860px) {
