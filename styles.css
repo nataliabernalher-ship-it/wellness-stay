@@ -1,23 +1,7 @@
 @font-face {
   font-family: "Fraunces";
   font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("./fonts/Fraunces-latin-var.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Fraunces";
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("./fonts/Fraunces-latin-var.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Fraunces";
-  font-style: normal;
-  font-weight: 600;
+  font-weight: 400 800;
   font-display: swap;
   src: url("./fonts/Fraunces-latin-var.woff2") format("woff2");
 }
@@ -429,118 +413,15 @@ h2 {
   font-size: 13px;
 }
 
-/* Types grid */
+/* Types grid — compone ws-image-gallery */
 .types {
-  column-count: 3;
-  column-gap: var(--space-md);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-md);
 }
 
-.type {
-  display: block;
-  position: relative;
-  margin: 0 0 var(--space-md);
-  min-height: 260px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: var(--shadow-sm);
-  break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  transition: transform 140ms ease, box-shadow 140ms ease;
-}
-
-.type:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.type:nth-child(1) {
-  min-height: 340px;
-}
-
-.type:nth-child(2) {
-  min-height: 260px;
-}
-
-.type:nth-child(3) {
-  min-height: 300px;
-}
-
-.type:nth-child(4) {
-  min-height: 360px;
-}
-
-.type:nth-child(5) {
-  min-height: 280px;
-}
-
-.type:nth-child(6) {
-  min-height: 320px;
-}
-
-.type-img {
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-neutral-200);
-  background-size: cover;
-  background-position: center center;
-  transform: scale(1.001);
-}
-
-.type-img[data-img="yoga"] {
-  background-image: url("./assets/Yoga.png");
-}
-.type-img[data-img="meditation"] {
-  background-image: url("./assets/card-1.jpg");
-}
-.type-img[data-img="detox"] {
-  background-image: url("./assets/detox.jpg");
-}
-.type-img[data-img="nature"] {
-  background-image: url("./assets/card-3.jpg");
-}
-.type-img[data-img="spa"] {
-  background-image: url("./assets/Spa.png");
-}
-.type-img[data-img="mindfulness"] {
-  background-image: url("./assets/mindfullness.png");
-}
-
-.type::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.35));
-  z-index: 1;
-}
-
-.type-overlay {
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 12px;
-  color: rgba(255, 255, 255, 0.92);
-  text-align: center;
-}
-
-.type-title {
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.98);
-  display: block;
-}
-
-.type-sub {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.88);
-  display: block;
-  margin-top: 2px;
+.types .ws-image-gallery {
+  width: 100%;
 }
 
 /* Footer */
@@ -588,7 +469,7 @@ h2 {
   }
 
   .types {
-    column-count: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .newsletter-card {
@@ -598,7 +479,7 @@ h2 {
 
 @media (max-width: 560px) {
   .types {
-    column-count: 1;
+    grid-template-columns: 1fr;
   }
 
   h2 {

@@ -10,14 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./styles.css?v=2" />
+    <link rel="stylesheet" href="./css/index.css?v=2" />
   </head>
   <body>
         <header class="site-header site-header--over-media">
       <div class="site-header__wrap">
         <nav class="ws-navigation glass" aria-label="Navegación principal">
-          <a class="ws-navigation__logo" href="#" aria-label="Inicio WellnessStay">WellnessStay.</a>
+          <a class="ws-navigation__logo" href="./index.html" aria-label="Inicio WellnessStay">WellnessStay.</a>
           <div class="ws-navigation__end">
             <a class="ws-navigation__host" href="#">Ser anfitrión</a>
             <div class="ws-navigation__user-chip">
@@ -70,7 +70,7 @@
           
           </div>
 
-                    <form class="ws-search" action="#" method="get" role="search" aria-label="Buscador de retiros">
+                    <form class="ws-search" action="./resultados.html" method="get" role="search" aria-label="Buscador de retiros">
             <div class="ws-search__bar glass">
               <label class="ws-search__segment ws-search__segment--where">
                 <span class="ws-search__label">Donde</span>
@@ -87,9 +87,8 @@
                 <span class="ws-search__label">Llegada</span>
                 <input
                   class="ws-search__input"
-                  type="text"
+                  type="date"
                   name="llegada"
-                  placeholder="Añade fecha"
                   autocomplete="off"
                 />
               </label>
@@ -98,9 +97,8 @@
                 <span class="ws-search__label">Salida</span>
                 <input
                   class="ws-search__input"
-                  type="text"
+                  type="date"
                   name="salida"
-                  placeholder="Añade fecha"
                   autocomplete="off"
                 />
               </label>
@@ -137,7 +135,7 @@
               <h2>Retiros destacados</h2>
               <p class="section-subtitle">Cuatro opciones populares para empezar a explorar.</p>
             </div>
-            <a class="btn btn-secondary" href="#">Ver todos</a>
+            <a class="btn btn-secondary" href="./resultados.html">Ver todos</a>
           </div>
 
           <div class="ws-card-grid">
@@ -222,47 +220,65 @@
           </div>
 
           <div class="types">
-            <a class="type" href="#" aria-label="Retiros de Yoga">
-              <span class="type-img" aria-hidden="true" data-img="yoga"></span>
-              <span class="type-overlay glass glass--light">
-                <span class="type-title">Yoga</span>
-                <span class="type-sub">Energía y flexibilidad</span>
-              </span>
+            <a class="ws-image-gallery" href="./resultados.html?tipo=yoga" data-img="yoga" aria-label="Retiros de Yoga">
+              <div class="ws-image-gallery__media" aria-hidden="true"></div>
+              <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
+              <div class="ws-image-gallery__content-card">
+                <div class="ws-image-gallery__content">
+                  <h3 class="ws-image-gallery__title">Retiros de Yoga</h3>
+                  <p class="ws-image-gallery__subtitle">Energía y flexibilidad</p>
+                </div>
+              </div>
             </a>
-            <a class="type" href="#" aria-label="Retiros de Meditación">
-              <span class="type-img" aria-hidden="true" data-img="meditation"></span>
-              <span class="type-overlay glass glass--light">
-                <span class="type-title">Meditación</span>
-                <span class="type-sub">Silencio y presencia</span>
-              </span>
+            <a class="ws-image-gallery" href="./resultados.html?tipo=meditacion" data-img="meditation" aria-label="Retiros de Meditación">
+              <div class="ws-image-gallery__media" aria-hidden="true"></div>
+              <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
+              <div class="ws-image-gallery__content-card">
+                <div class="ws-image-gallery__content">
+                  <h3 class="ws-image-gallery__title">Retiros de Meditación</h3>
+                  <p class="ws-image-gallery__subtitle">Silencio y presencia</p>
+                </div>
+              </div>
             </a>
-            <a class="type" href="#" aria-label="Retiros de Detox">
-              <span class="type-img" aria-hidden="true" data-img="detox"></span>
-              <span class="type-overlay glass glass--light">
-                <span class="type-title">Detox</span>
-                <span class="type-sub">Ligereza y descanso</span>
-              </span>
+            <a class="ws-image-gallery" href="./resultados.html?tipo=detox" data-img="detox" aria-label="Retiros de Detox">
+              <div class="ws-image-gallery__media" aria-hidden="true"></div>
+              <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
+              <div class="ws-image-gallery__content-card">
+                <div class="ws-image-gallery__content">
+                  <h3 class="ws-image-gallery__title">Retiros de Detox</h3>
+                  <p class="ws-image-gallery__subtitle">Ligereza y descanso</p>
+                </div>
+              </div>
             </a>
-            <a class="type" href="#" aria-label="Retiros de Naturaleza">
-              <span class="type-img" aria-hidden="true" data-img="nature"></span>
-              <span class="type-overlay glass glass--light">
-                <span class="type-title">Naturaleza</span>
-                <span class="type-sub">Senderos y aire puro</span>
-              </span>
+            <a class="ws-image-gallery" href="./resultados.html?tipo=naturaleza" data-img="nature" aria-label="Retiros de Naturaleza">
+              <div class="ws-image-gallery__media" aria-hidden="true"></div>
+              <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
+              <div class="ws-image-gallery__content-card">
+                <div class="ws-image-gallery__content">
+                  <h3 class="ws-image-gallery__title">Retiros de Naturaleza</h3>
+                  <p class="ws-image-gallery__subtitle">Senderos y aire puro</p>
+                </div>
+              </div>
             </a>
-            <a class="type" href="#" aria-label="Retiros de Spa">
-              <span class="type-img" aria-hidden="true" data-img="spa"></span>
-              <span class="type-overlay glass glass--light">
-                <span class="type-title">Spa</span>
-                <span class="type-sub">Cuerpo y recuperación</span>
-              </span>
+            <a class="ws-image-gallery" href="./resultados.html?tipo=spa" data-img="spa" aria-label="Retiros de Spa">
+              <div class="ws-image-gallery__media" aria-hidden="true"></div>
+              <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
+              <div class="ws-image-gallery__content-card">
+                <div class="ws-image-gallery__content">
+                  <h3 class="ws-image-gallery__title">Retiros de Spa</h3>
+                  <p class="ws-image-gallery__subtitle">Cuerpo y recuperación</p>
+                </div>
+              </div>
             </a>
-            <a class="type" href="#" aria-label="Retiros de Mindfulness">
-              <span class="type-img" aria-hidden="true" data-img="mindfulness"></span>
-              <span class="type-overlay glass glass--light">
-                <span class="type-title">Mindfulness</span>
-                <span class="type-sub">Foco y calma</span>
-              </span>
+            <a class="ws-image-gallery" href="./resultados.html?tipo=mindfulness" data-img="mindfulness" aria-label="Retiros de Mindfulness">
+              <div class="ws-image-gallery__media" aria-hidden="true"></div>
+              <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
+              <div class="ws-image-gallery__content-card">
+                <div class="ws-image-gallery__content">
+                  <h3 class="ws-image-gallery__title">Retiros de Mindfulness</h3>
+                  <p class="ws-image-gallery__subtitle">Foco y calma</p>
+                </div>
+              </div>
             </a>
           </div>
         </div>

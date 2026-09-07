@@ -35,6 +35,11 @@
   opacity: 0.88;
 }
 
+.page-marketplace .ws-navigation__logo,
+.site-header--solid .ws-navigation__logo {
+  color: var(--color-neutral-800);
+}
+
 .ws-navigation__end {
   display: flex;
   align-items: center;

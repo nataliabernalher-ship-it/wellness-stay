@@ -89,6 +89,26 @@
   background-image: url("../../assets/card-4.jpg");
 }
 
+.card__media[data-img="yoga"],
+.ws-card__media[data-img="yoga"] {
+  background-image: url("../../assets/Yoga.png");
+}
+
+.card__media[data-img="spa"],
+.ws-card__media[data-img="spa"] {
+  background-image: url("../../assets/Spa.png");
+}
+
+.card__media[data-img="detox"],
+.ws-card__media[data-img="detox"] {
+  background-image: url("../../assets/detox.jpg");
+}
+
+.card__media[data-img="mindfulness"],
+.ws-card__media[data-img="mindfulness"] {
+  background-image: url("../../assets/mindfullness.png");
+}
+
 .card-meta,
 .card__meta,
 .ws-card__meta {

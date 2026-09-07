@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retiros disponibles | WellnessStay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=2" />
+    <link rel="stylesheet" href="./css/index.css?v=2" />
+    <link rel="stylesheet" href="./css/resultados.css" />
+    <script src="./js/marketplace.js" defer></script>
+  </head>
+  <body class="page-marketplace">
+    <div class="marketplace-top">
+      <header class="site-header site-header--solid">
+        <div class="site-header__wrap">
+          <nav class="ws-navigation glass" aria-label="Navegación principal">
+            <a class="ws-navigation__logo" href="./index.html" aria-label="Inicio WellnessStay">WellnessStay.</a>
+            <div class="ws-navigation__end">
+              <a class="ws-navigation__host" href="#">Ser anfitrión</a>
+              <div class="ws-navigation__user-chip">
+                <button type="button" class="ws-navigation__menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                  <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true">
+                    <path fill="currentColor" d="M0 1h20v2H0zm0 5h20v2H0zm0 5h20v2H0z" />
+                  </svg>
+                </button>
+                <svg class="ws-navigation__avatar" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                  <circle cx="16" cy="16" r="16" fill="#ffffff" />
+                  <circle cx="16" cy="13" r="4.5" fill="#777373" />
+                  <path fill="#777373" d="M8 26.5c0-4.4 3.6-8 8-8s8 3.6 8 8v1.5H8V26.5z" />
+                  <circle cx="24" cy="10" r="3" fill="#BFA87E" />
+                </svg>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div class="marketplace-search">
+        <form
+          id="marketplace-form"
+          class="ws-search ws-search--on-light"
+          action="./resultados.html"
+          method="get"
+          role="search"
+          aria-label="Buscador de retiros"
+          data-marketplace-form
+        >
+          <input type="hidden" name="tipo" value="" />
+          <input type="hidden" name="duracion" value="" />
+          <input type="hidden" name="precio" value="" />
+          <div class="ws-search__bar glass">
+            <label class="ws-search__segment ws-search__segment--where">
+              <span class="ws-search__label">Donde</span>
+              <input
+                class="ws-search__input"
+                type="search"
+                name="donde"
+                placeholder="Busca el destino"
+                autocomplete="off"
+              />
+            </label>
+            <span class="ws-search__divider" aria-hidden="true"></span>
+            <label class="ws-search__segment ws-search__segment--arrival">
+              <span class="ws-search__label">Llegada</span>
+              <input class="ws-search__input" type="date" name="llegada" autocomplete="off" />
+            </label>
+            <span class="ws-search__divider" aria-hidden="true"></span>
+            <label class="ws-search__segment ws-search__segment--departure">
+              <span class="ws-search__label">Salida</span>
+              <input class="ws-search__input" type="date" name="salida" autocomplete="off" />
+            </label>
+            <span class="ws-search__divider" aria-hidden="true"></span>
+            <label class="ws-search__segment ws-search__segment--guests">
+              <span class="ws-search__label">Personas</span>
+              <select class="ws-search__input ws-search__select" name="personas" aria-label="Número de personas">
+                <option value="" selected>Añade personas</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5+ personas</option>
+              </select>
+            </label>
+            <button class="ws-search__submit" type="submit" aria-label="Buscar retiros">
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="marketplace-filters">
+        <div class="ws-filters" role="toolbar" aria-label="Filtrar por tipo de retiro">
+          <button type="button" class="ws-filter" data-filter-tipo="" data-filter-all aria-pressed="true">
+            <img src="./components/iconos/Amazing%20Views.svg" alt="" width="24" height="24" />
+            Todos
+          </button>
+          <button type="button" class="ws-filter" data-filter-tipo="yoga" aria-pressed="false">
+            <img src="./components/iconos/Fitness.svg" alt="" width="24" height="24" />
+            Yoga
+          </button>
+          <button type="button" class="ws-filter" data-filter-tipo="meditacion" aria-pressed="false">
+            <img src="./components/iconos/National%20parks.svg" alt="" width="24" height="24" />
+            Meditación
+          </button>
+          <button type="button" class="ws-filter" data-filter-tipo="detox" aria-pressed="false">
+            <img src="./components/iconos/Hammock.svg" alt="" width="24" height="24" />
+            Detox
+          </button>
+          <button type="button" class="ws-filter" data-filter-tipo="naturaleza" aria-pressed="false">
+            <img src="./components/iconos/Mountains.svg" alt="" width="24" height="24" />
+            Naturaleza
+          </button>
+          <button type="button" class="ws-filter" data-filter-tipo="spa" aria-pressed="false">
+            <img src="./components/iconos/Hot%20Tub.svg" alt="" width="24" height="24" />
+            Spa
+          </button>
+          <button type="button" class="ws-filter" data-filter-tipo="mindfulness" aria-pressed="false">
+            <img src="./components/iconos/Lake.svg" alt="" width="24" height="24" />
+            Mindfulness
+          </button>
+        </div>
+
+        <div class="ws-filters-more">
+          <button
+            type="button"
+            class="ws-filters-more__btn"
+            data-more-filters
+            aria-expanded="false"
+            aria-controls="more-filters"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M3 5h18v2H3V5zm4 6h10v2H7v-2zm-2 6h14v2H5v-2z"
+              />
+            </svg>
+            Filtros
+          </button>
+          <div id="more-filters" class="ws-filters-panel" data-more-panel hidden>
+            <h3>Afinar búsqueda</h3>
+            <fieldset>
+              <legend>Duración</legend>
+              <label><input type="radio" name="filtro-duracion" value="" checked /> Cualquiera</label>
+              <label><input type="radio" name="filtro-duracion" value="corta" /> 3 noches o menos</label>
+              <label><input type="radio" name="filtro-duracion" value="media" /> 4–5 noches</label>
+              <label><input type="radio" name="filtro-duracion" value="larga" /> 6 noches o más</label>
+            </fieldset>
+            <fieldset>
+              <legend>Precio por persona</legend>
+              <label><input type="radio" name="filtro-precio" value="" checked /> Cualquiera</label>
+              <label><input type="radio" name="filtro-precio" value="hasta-350" /> Hasta $350</label>
+              <label><input type="radio" name="filtro-precio" value="350-500" /> $350 – $500</label>
+              <label><input type="radio" name="filtro-precio" value="mas-500" /> Más de $500</label>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="marketplace-main">
+      <div class="container">
+        <div class="marketplace-heading">
+          <div>
+            <h1 data-results-count>Retiros disponibles</h1>
+            <p class="marketplace-summary" data-results-summary>Explora opciones según destino y fechas.</p>
+          </div>
+          <label class="marketplace-sort">
+            Ordenar
+            <select name="orden" form="marketplace-form" aria-label="Ordenar resultados">
+              <option value="relevancia" selected>Recomendados</option>
+              <option value="precio-asc">Precio: menor a mayor</option>
+              <option value="precio-desc">Precio: mayor a menor</option>
+              <option value="duracion">Duración</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="ws-card-grid" data-results-grid>
+          <article class="ws-card" data-order="1" data-type="meditacion" data-location="Pirineos, España" data-nights="5" data-price="420" data-guests="8">
+            <div class="ws-card__media-wrap">
+              <div class="ws-card__media" aria-hidden="true" data-img="mountain"></div>
+              <div class="ws-card__overlay" aria-hidden="true"></div>
+              <div class="ws-card__meta">
+                <span class="ws-pill">Meditación</span>
+                <span class="ws-pill ws-pill--muted">5 noches</span>
+              </div>
+            </div>
+            <div class="ws-card__content glass glass--light">
+              <h3 class="ws-card__title">Silencio en la montaña</h3>
+              <p class="ws-card__text">Pirineos, España</p>
+              <div class="ws-card__footer">
+                <span class="ws-card__price"><strong>$420</strong> / persona</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="ws-card" data-order="2" data-type="yoga" data-location="Mallorca, España" data-nights="3" data-price="310" data-guests="12">
+            <div class="ws-card__media-wrap">
+              <div class="ws-card__media" aria-hidden="true" data-img="beach"></div>
+              <div class="ws-card__overlay" aria-hidden="true"></div>
+              <div class="ws-card__meta">
+                <span class="ws-pill">Yoga</span>
+                <span class="ws-pill ws-pill--muted">3 noches</span>
+              </div>
+            </div>
+            <div class="ws-card__content glass glass--light">
+              <h3 class="ws-card__title">Flow &amp; mar</h3>
+              <p class="ws-card__text">Mallorca, España</p>
+              <div class="ws-card__footer">
+                <span class="ws-card__price"><strong>$310</strong> / persona</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="ws-card" data-order="3" data-type="detox" data-location="Asturias, España" data-nights="7" data-price="590" data-guests="10">
+            <div class="ws-card__media-wrap">
+              <div class="ws-card__media" aria-hidden="true" data-img="forest"></div>
+              <div class="ws-card__overlay" aria-hidden="true"></div>
+              <div class="ws-card__meta">
+                <span class="ws-pill">Detox</span>
+                <span class="ws-pill ws-pill--muted">7 noches</span>
+              </div>
+            </div>
+            <div class="ws-card__content glass glass--light">
+              <h3 class="ws-card__title">Reinicio natural</h3>
+              <p class="ws-card__text">Asturias, España</p>
+              <div class="ws-card__footer">
+                <span class="ws-card__price"><strong>$590</strong> / persona</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="ws-card" data-order="4" data-type="mindfulness" data-location="Costa Brava, España" data-nights="4" data-price="380" data-guests="8">
+            <div class="ws-card__media-wrap">
+              <div class="ws-card__media" aria-hidden="true" data-img="4"></div>
+              <div class="ws-card__overlay" aria-hidden="true"></div>
+              <div class="ws-card__meta">
+                <span class="ws-pill">Mindfulness</span>
+                <span class="ws-pill ws-pill--muted">4 noches</span>
+              </div>
+            </div>
+            <div class="ws-card__content glass glass--light">
+              <h3 class="ws-card__title">Claridad &amp; enfoque</h3>
+              <p class="ws-card__text">Costa Brava, España</p>
+              <div class="ws-card__footer">
+                <span class="ws-card__price"><strong>$380</strong> / persona</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="ws-card" data-order="5" data-type="yoga" data-location="Ibiza, España" data-nights="5" data-price="450" data-guests="16">
+            <div class="ws-card__media-wrap">
+              <div class="ws-card__media" aria-hidden="true" data-img="yoga"></div>
+              <div class="ws-card__overlay" aria-hidden="true"></div>
+              <div class="ws-card__meta">
+                <span class="ws-pill">Yoga</span>
+                <span class="ws-pill ws-pill--muted">5 noches</span>
+              </div>
+            </div>
+            <div class="ws-card__content glass glass--light">
+              <h3 class="ws-card__title">Alma de yoga</h3>
+              <p class="ws-card__text">Ibiza, España</p>
+              <div class="ws-card__footer">
+                <span class="ws-card__price"><strong>$450</strong> / persona</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="ws-card" data-order="6" data-type="spa" data-location="Andalucía, España" data-nights="3" data-price="520" data-guests="6">
+            <div class="ws-card__media-wrap">
+              <div class="ws-card__media" aria-hidden="true" data-img="spa"></div>
+              <div class="ws-card__overlay" aria-hidden="true"></div>
+              <div class="ws-card__meta">
+                <span class="ws-pill">Spa</span>
+                <span class="ws-pill ws-pill--muted">3 noches</span>
+              </div>
+            </div>
+            <div class="ws-card__content glass glass--light">
+              <h3 class="ws-card__title">Spa &amp; silencio</h3>
+              <p class="ws-card__text">Andalucía, España</p>
+              <div class="ws-card__footer">
+                <span class="ws-card__price"><strong>$520</strong> / persona</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="ws-card" data-order="7" data-type="detox" data-location="Galicia, España" data-nights="6" data-price="640" data-guests="8">
+            <div class="ws-card__media-wrap">
+              <div class="ws-card__media" aria-hidden="true" data-img="detox"></div>
+              <div class="ws-card__overlay" aria-hidden="true"></div>
+              <div class="ws-card__meta">
+                <span class="ws-pill">Detox</span>
+                <span class="ws-pill ws-pill--muted">6 noches</span>
+              </div>
+            </div>
+            <div class="ws-card__content glass glass--light">
+              <h3 class="ws-card__title">Detox atlántico</h3>
+              <p class="ws-card__text">Galicia, España</p>
+              <div class="ws-card__footer">
+                <span class="ws-card__price"><strong>$640</strong> / persona</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="ws-card" data-order="8" data-type="mindfulness" data-location="Pirineos, España" data-nights="4" data-price="360" data-guests="10">
+            <div class="ws-card__media-wrap">
+              <div class="ws-card__media" aria-hidden="true" data-img="mindfulness"></div>
+              <div class="ws-card__overlay" aria-hidden="true"></div>
+              <div class="ws-card__meta">
+                <span class="ws-pill">Mindfulness</span>
+                <span class="ws-pill ws-pill--muted">4 noches</span>
+              </div>
+            </div>
+            <div class="ws-card__content glass glass--light">
+              <h3 class="ws-card__title">Presencia en el bosque</h3>
+              <p class="ws-card__text">Pirineos, España</p>
+              <div class="ws-card__footer">
+                <span class="ws-card__price"><strong>$360</strong> / persona</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="ws-card" data-order="9" data-type="yoga" data-location="Mallorca, España" data-nights="4" data-price="340" data-guests="14">
+            <div class="ws-card__media-wrap">
+              <div class="ws-card__media" aria-hidden="true" data-img="beach"></div>
+              <div class="ws-card__overlay" aria-hidden="true"></div>
+              <div class="ws-card__meta">
+                <span class="ws-pill">Yoga</span>
+                <span class="ws-pill ws-pill--muted">4 noches</span>
+              </div>
+            </div>
+            <div class="ws-card__content glass glass--light">
+              <h3 class="ws-card__title">Amanecer frente al mar</h3>
+              <p class="ws-card__text">Mallorca, España</p>
+              <div class="ws-card__footer">
+                <span class="ws-card__price"><strong>$340</strong> / persona</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="ws-card" data-order="10" data-type="meditacion" data-location="Sierra Nevada, España" data-nights="7" data-price="480" data-guests="12">
+            <div class="ws-card__media-wrap">
+              <div class="ws-card__media" aria-hidden="true" data-img="mountain"></div>
+              <div class="ws-card__overlay" aria-hidden="true"></div>
+              <div class="ws-card__meta">
+                <span class="ws-pill">Meditación</span>
+                <span class="ws-pill ws-pill--muted">7 noches</span>
+              </div>
+            </div>
+            <div class="ws-card__content glass glass--light">
+              <h3 class="ws-card__title">Cumbre y meditación</h3>
+              <p class="ws-card__text">Sierra Nevada, España</p>
+              <div class="ws-card__footer">
+                <span class="ws-card__price"><strong>$480</strong> / persona</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="ws-card" data-order="11" data-type="naturaleza" data-location="Asturias, España" data-nights="5" data-price="410" data-guests="8">
+            <div class="ws-card__media-wrap">
+              <div class="ws-card__media" aria-hidden="true" data-img="forest"></div>
+              <div class="ws-card__overlay" aria-hidden="true"></div>
+              <div class="ws-card__meta">
+                <span class="ws-pill">Naturaleza</span>
+                <span class="ws-pill ws-pill--muted">5 noches</span>
+              </div>
+            </div>
+            <div class="ws-card__content glass glass--light">
+              <h3 class="ws-card__title">Tierra y descanso</h3>
+              <p class="ws-card__text">Asturias, España</p>
+              <div class="ws-card__footer">
+                <span class="ws-card__price"><strong>$410</strong> / persona</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="ws-card" data-order="12" data-type="spa" data-location="Andalucía, España" data-nights="3" data-price="290" data-guests="20">
+            <div class="ws-card__media-wrap">
+              <div class="ws-card__media" aria-hidden="true" data-img="spa"></div>
+              <div class="ws-card__overlay" aria-hidden="true"></div>
+              <div class="ws-card__meta">
+                <span class="ws-pill">Spa</span>
+                <span class="ws-pill ws-pill--muted">3 noches</span>
+              </div>
+            </div>
+            <div class="ws-card__content glass glass--light">
+              <h3 class="ws-card__title">Ritual termal</h3>
+              <p class="ws-card__text">Andalucía, España</p>
+              <div class="ws-card__footer">
+                <span class="ws-card__price"><strong>$290</strong> / persona</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="marketplace-empty" data-results-empty hidden>
+          <h2>No hay retiros para esta búsqueda</h2>
+          <p>Prueba otro destino, fechas más flexibles o quita algún filtro.</p>
+          <button type="button" class="btn btn-primary" data-reset>Ver todos los retiros</button>
+        </div>
+      </div>
+    </main>
+
+    <footer id="ayuda" class="footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand brand-footer">
+            <img class="brand-logo" src="./assets/logo.svg" alt="Retiro" width="175" height="47" decoding="async" />
+          </div>
+          <p class="footer-text">Buscador de retiros de salud y bienestar.</p>
+        </div>
+        <div class="footer-links" aria-label="Enlaces de ayuda">
+          <a href="./index.html">Inicio</a>
+          <a href="#">Políticas</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
