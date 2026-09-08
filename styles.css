@@ -403,7 +403,8 @@ h2 {
   min-width: auto;
 }
 
-.newsletter-form .btn {
+.newsletter-form .btn,
+.newsletter-form .ws-button {
   width: 100%;
 }
 

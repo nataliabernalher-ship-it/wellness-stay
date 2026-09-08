@@ -1,59 +1,94 @@
-/* Figma: botones (Button) — tokens: tokens.json → button */
+/* Figma: Primary Buttons (15:1059), Secondary Buttons (15:1072)
+   tokens.json → button + color-primary / color-neutral / text-inverse / radius-md */
 
 .btn,
 .ws-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   gap: var(--space-sm);
-  padding: 10px 16px;
+  padding: var(--space-md) var(--space-lg);
   border-radius: var(--radius-md);
   border: 1px solid transparent;
   font-weight: 700;
   font-size: 16px;
   font-family: var(--font-body);
+  line-height: 1;
   cursor: pointer;
-  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
   user-select: none;
   white-space: nowrap;
   text-decoration: none;
+  color: var(--text-inverse);
 }
 
-.btn:active,
-.ws-button:active {
-  transform: translateY(1px);
+.ws-button--small {
+  font-weight: 600;
+}
+
+.btn-wide,
+.ws-button--full {
+  width: 100%;
+  font-weight: 700;
 }
 
 .btn-primary,
 .ws-button--primary {
   background: var(--color-primary-400);
-  color: var(--text-inverse);
 }
 
-.btn-primary:hover,
-.ws-button--primary:hover {
+.btn-primary:hover:not(:disabled),
+.ws-button--primary:hover:not(:disabled),
+.ws-button--primary.ws-button--hover {
   background: var(--color-primary-200);
 }
 
 .btn-primary:focus-visible,
-.ws-button--primary:focus-visible {
+.ws-button--primary:focus-visible,
+.ws-button--primary.ws-button--focus {
   outline: none;
   box-shadow: var(--ring);
 }
 
+.btn-primary:active:not(:disabled),
+.ws-button--primary:active:not(:disabled),
+.ws-button--primary.ws-button--pressed {
+  background: var(--color-primary-700);
+}
+
 .btn-secondary,
 .ws-button--secondary {
-  background: transparent;
-  border-color: var(--border-default);
-  color: var(--text-display);
+  background: var(--color-neutral-700);
 }
 
-.btn-secondary:hover,
-.ws-button--secondary:hover {
-  background: var(--bg-secondary);
+.btn-secondary:hover:not(:disabled),
+.ws-button--secondary:hover:not(:disabled),
+.ws-button--secondary.ws-button--hover {
+  background: var(--color-neutral-500);
 }
 
-.btn-wide,
-.ws-button--wide {
-  width: 100%;
+.btn-secondary:focus-visible,
+.ws-button--secondary:focus-visible,
+.ws-button--secondary.ws-button--focus {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+.btn-secondary:active:not(:disabled),
+.ws-button--secondary:active:not(:disabled),
+.ws-button--secondary.ws-button--pressed {
+  background: var(--color-neutral-700);
+}
+
+.btn:disabled,
+.ws-button:disabled,
+.ws-button--disabled {
+  background: var(--color-neutral-200);
+  color: var(--text-inverse);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.ws-button--disabled {
+  pointer-events: none;
 }

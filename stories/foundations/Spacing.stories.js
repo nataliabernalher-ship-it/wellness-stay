@@ -10,6 +10,14 @@ function el(html) {
 export default {
   title: "Foundations/Spacing",
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "Escala de spacing desde `tokens.json`. No hay tokens de spacing publicados aparte en Figma; estos valores coinciden con `--space-*` en `styles.css`.",
+      },
+    },
+  },
 };
 
 export const Escala = {

@@ -17,6 +17,19 @@ const preview = {
     },
 
     layout: "fullscreen",
+
+    options: {
+      storySort: {
+        order: [
+          "Foundations",
+          "Components",
+          ["Button", "Link", "Card", "Image Gallery"],
+          "Patterns",
+          "Sections",
+          ["Hero", "Retreat Gallery", "Footer"],
+        ],
+      },
+    },
   },
 };
 

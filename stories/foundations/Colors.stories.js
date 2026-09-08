@@ -35,7 +35,7 @@ function semanticRow(label, cssVar, extraStyle = "") {
 }
 
 export default {
-  title: "Foundations/Colors",
+  title: "Foundations/Color",
   tags: ["autodocs"],
   parameters: {
     docs: {

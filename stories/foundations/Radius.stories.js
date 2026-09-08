@@ -10,6 +10,14 @@ function el(html) {
 export default {
   title: "Foundations/Radius",
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "Escala de radius desde `tokens.json`. Coincide con `--radius-*` en `styles.css`.",
+      },
+    },
+  },
 };
 
 export const Escala = {
