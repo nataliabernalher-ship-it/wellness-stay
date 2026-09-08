@@ -1,4 +1,4 @@
-import { renderFooter } from "../../components/footer/footer.js";
+import footerHtml from "../../partials/site-footer.html?raw";
 import { htmlStory } from "../helpers/render.js";
 
 export default {
@@ -8,7 +8,7 @@ export default {
     docs: {
       description: {
         component: `
-Pie de página del sitio. No hay componente Footer publicado en Figma.
+Pie de página del sitio (\`partials/site-footer.html\`). No hay componente Footer publicado en Figma.
 
 **Composición:** marca + **Link** muted para los enlaces de ayuda.
 
@@ -17,13 +17,7 @@ Pie de página del sitio. No hay componente Footer publicado en Figma.
       },
     },
   },
-  argTypes: {
-    text: { control: "text" },
-  },
-  args: {
-    text: "Buscador de retiros de salud y bienestar.",
-  },
-  render: (args) => htmlStory(renderFooter(args)),
+  render: () => htmlStory(footerHtml),
 };
 
 export const Default = {

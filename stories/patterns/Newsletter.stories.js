@@ -1,4 +1,4 @@
-import { renderNewsletterBlock } from "../../components/newsletter/newsletter.js";
+import newsletterHtml from "../../partials/section-newsletter.html?raw";
 import { htmlStory } from "../helpers/render.js";
 
 export default {
@@ -8,7 +8,7 @@ export default {
     docs: {
       description: {
         component: `
-Bloque de suscripción del sitio. No hay componente Newsletter publicado en Figma.
+Bloque de suscripción (\`partials/section-newsletter.html\`). No hay componente Newsletter publicado en Figma.
 
 **Composición:** reutiliza **Button** primary/full. El campo email usa \`.field-input\` de página porque **Input no existe** en el DS.
 
@@ -19,19 +19,7 @@ Bloque de suscripción del sitio. No hay componente Newsletter publicado en Figm
       },
     },
   },
-  argTypes: {
-    title: { control: "text" },
-    body: { control: "text" },
-    placeholder: { control: "text" },
-    submitLabel: { control: "text" },
-  },
-  args: {
-    title: "Consejos wellness en tu inbox",
-    body: "Ideas simples para dormir mejor, moverte con intención, comer más consciente y sostener hábitos que sí duran.",
-    placeholder: "tu@email.com",
-    submitLabel: "Suscribirme",
-  },
-  render: (args) => htmlStory(renderNewsletterBlock(args)),
+  render: () => htmlStory(newsletterHtml),
 };
 
 export const Default = {

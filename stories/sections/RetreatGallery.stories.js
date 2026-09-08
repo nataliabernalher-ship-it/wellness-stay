@@ -1,4 +1,4 @@
-import { renderRetreatTypes } from "../../components/tipos/tipos.js";
+import retreatGalleryHtml from "../../partials/section-tipos.html?raw";
 import { htmlStory } from "../helpers/render.js";
 
 export default {
@@ -8,7 +8,7 @@ export default {
     docs: {
       description: {
         component: `
-Galería de tipos de retiro de la home. No hay componente publicado en Figma.
+Galería de tipos de retiro (\`partials/section-tipos.html\`). No hay componente publicado en Figma.
 
 **Composición:** grid de página + **Image Gallery** (una instancia por tipo).
 
@@ -17,15 +17,7 @@ Galería de tipos de retiro de la home. No hay componente publicado en Figma.
       },
     },
   },
-  argTypes: {
-    heading: { control: "text" },
-    subtitle: { control: "text" },
-  },
-  args: {
-    heading: "Tipos de retiro",
-    subtitle: "Explora por intención: movimiento, descanso, foco o transformación.",
-  },
-  render: (args) => htmlStory(renderRetreatTypes(args)),
+  render: () => htmlStory(retreatGalleryHtml),
 };
 
 export const Default = {

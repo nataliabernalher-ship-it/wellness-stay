@@ -1,4 +1,4 @@
-import heroHtml from "../../components/hero/hero.html?raw";
+import heroHtml from "../../partials/section-hero.html?raw";
 import searchFormHtml from "../../components/search/search-form.html?raw";
 import { applyIncludes } from "./render.js";
 

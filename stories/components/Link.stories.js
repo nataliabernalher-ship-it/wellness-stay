@@ -9,7 +9,7 @@ export default {
     docs: {
       description: {
         component: `
-Enlace de texto del repositorio (\`components/link.css\`). No hay componente Link publicado en Figma.
+Enlace de texto del repositorio (\`components/link/link.css\`). No hay componente Link publicado en Figma.
 
 **Uso:** navegación inline. \`muted\` para pies y textos secundarios.
 

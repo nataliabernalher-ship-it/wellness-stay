@@ -17,11 +17,16 @@ Figma \`Navigation\` (21:750).
 **Estados:** Figma no publica un set de estados.
 
 **Tokens:** \`.glass\`, \`--font-display\`, colores de navigation.css.
+
+En las páginas el \`<nav>\` va dentro de \`partials/site-header.html\` o \`site-header-solid.html\`.
 `,
       },
     },
   },
-  render: () => htmlStory(navigationHtml),
+  render: () =>
+    htmlStory(
+      `<header class="site-header site-header--over-media"><div class="site-header__wrap">${navigationHtml}</div></header>`
+    ),
 };
 
 export const Default = {
