@@ -4,7 +4,7 @@
   --ws-search-divider: #e5e7eb;
   --ws-search-label: #ffffff;
   --ws-search-muted: #e5e7eb;
-  --ws-search-submit: #d97706;
+  --ws-search-submit: var(--color-secondary-300);
   --ws-search-font: "Inter", ui-sans-serif, system-ui, sans-serif;
   display: block;
   width: 100%;
@@ -124,7 +124,7 @@
   border: none;
   border-radius: 50%;
   background: var(--ws-search-submit);
-  color: #ffffff;
+  color: var(--text-accent);
   cursor: pointer;
   display: inline-flex;
   align-items: center;

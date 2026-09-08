@@ -1,6 +1,6 @@
 @import url("../components/button/button.css");
 @import url("../components/link.css");
-@import url("../components/search/search.css");
+@import url("../components/search/search.css?v=2");
 @import url("../components/navigation/navigation.css");
 @import url("../components/card/card.css?v=5");
-@import url("../components/image-gallery/image-gallery.css?v=2");
+@import url("../components/image-gallery/image-gallery.css?v=3");
