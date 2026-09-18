@@ -82,7 +82,7 @@ a.ws-image-gallery:focus-visible {
 }
 
 .ws-image-gallery[data-img="yoga"] .ws-image-gallery__media {
-  background-image: url("../../assets/Yoga.png");
+  background-image: url("../../assets/Yoga.jpg");
 }
 
 .ws-image-gallery[data-img="meditation"] .ws-image-gallery__media {
@@ -98,11 +98,11 @@ a.ws-image-gallery:focus-visible {
 }
 
 .ws-image-gallery[data-img="spa"] .ws-image-gallery__media {
-  background-image: url("../../assets/Spa.png");
+  background-image: url("../../assets/Spa.jpg");
 }
 
 .ws-image-gallery[data-img="mindfulness"] .ws-image-gallery__media {
-  background-image: url("../../assets/mindfullness.png");
+  background-image: url("../../assets/mindfullness.jpg");
 }
 
 .ws-image-gallery__content-card {
