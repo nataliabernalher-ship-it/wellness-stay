@@ -1,34 +1,32 @@
 import searchFormHtml from "../../components/search/search-form.html?raw";
 import { htmlStory } from "../helpers/render.js";
 
+function withDevice(html, { stacked = false, width } = {}) {
+  const form = stacked ? html.replace('class="ws-search"', 'class="ws-search ws-search--stacked"') : html;
+  const inner = `<div style="padding:var(--space-lg);background:var(--bg-secondary);">${form}</div>`;
+  if (!width) return htmlStory(inner);
+  return htmlStory(`<div style="width:${width}px;max-width:100%">${inner}</div>`);
+}
+
 export default {
   title: "Patterns/Search Bar",
   tags: ["autodocs"],
   parameters: {
-    docs: {
-      description: {
-        component: `
-Figma \`Search\` (21:753).
-
-**Uso:** búsqueda de retiros (destino, fechas, personas).
-
-**Composición:** el patrón incluye campos nativos de texto, fecha y select. **Input y Select no existen** como componentes del DS; no se extraen.
-
-El CTA circular de buscar forma parte de este patrón, no del Button de Figma.
-
-**Estados:** Figma no publica hover/focus/disabled/error/loading del Search como set.
-
-**Tokens:** \`.glass\`, \`--font-display\`, \`--font-body\`, \`--text-inverse\`, \`--space-lg\`.
-`,
-      },
-    },
+    layout: "fullscreen",
   },
-  render: () =>
-    htmlStory(
-      `<div class="container" style="padding:var(--space-lg);max-width:1120px;background:var(--bg-inverse);">${searchFormHtml}</div>`
-    ),
+  render: () => withDevice(searchFormHtml),
 };
 
-export const Default = {
-  name: "Default",
+export const Desktop = {
+  name: "Desktop",
+};
+
+export const Tablet = {
+  name: "Tablet",
+  render: () => withDevice(searchFormHtml, { stacked: true, width: 520 }),
+};
+
+export const Mobile = {
+  name: "Mobile",
+  render: () => withDevice(searchFormHtml, { stacked: true, width: 328 }),
 };

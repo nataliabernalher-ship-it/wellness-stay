@@ -10,14 +10,6 @@ function el(html) {
 export default {
   title: "Foundations/Radius",
   tags: ["autodocs"],
-  parameters: {
-    docs: {
-      description: {
-        component:
-          "Escala de radius desde `tokens.json`. Coincide con `--radius-*` en `styles.css`.",
-      },
-    },
-  },
 };
 
 export const Escala = {
@@ -38,7 +30,7 @@ export const Escala = {
     const html = `
       <div class="ws-fdn">
         <h2 class="ws-fdn__title">Radius</h2>
-        <p class="ws-fdn__subtitle">Radios de borde desde tokens.</p>
+        <p class="ws-fdn__subtitle">Incluye <code>--radius-2xs</code>, <code>--radius-4</code> y <code>--radius-full</code> de Sizes en Foundations.</p>
         <div class="ws-fdn__section">
           <div class="ws-fdn__row" style="gap:var(--space-xl)">${cells}</div>
         </div>

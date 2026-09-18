@@ -1,5 +1,8 @@
-/* Figma: Primary Buttons (15:1059), Secondary Buttons (15:1072)
-   tokens.json → button + color-primary / color-neutral / text-inverse / radius-md */
+/* Figma WellnessStay Components / button (2202:513)
+   Un solo componente: Type Primary | Secondary | IconButton,
+   Device Desktop | Mobile, Status Default | Hover | Selected | Disabled.
+   Clases públicas: .btn, .ws-button, --primary, --secondary, --small, --full,
+   --icon, --hover, --focus, --pressed, --disabled. */
 
 .btn,
 .ws-button {
@@ -8,87 +11,134 @@
   justify-content: center;
   box-sizing: border-box;
   gap: var(--space-sm);
-  padding: var(--space-md) var(--space-lg);
-  border-radius: var(--radius-md);
-  border: 1px solid transparent;
-  font-weight: 700;
-  font-size: 16px;
+  height: var(--space-10);
+  padding: var(--space-sm) var(--space-lg);
+  border: 0;
+  border-radius: var(--radius-4);
   font-family: var(--font-body);
-  line-height: 1;
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  line-height: 16px;
   cursor: pointer;
   user-select: none;
   white-space: nowrap;
   text-decoration: none;
   color: var(--text-inverse);
-}
-
-.ws-button--small {
-  font-weight: 600;
+  background: transparent;
 }
 
 .btn-wide,
 .ws-button--full {
   width: 100%;
-  font-weight: 700;
 }
 
+/* Type=Primary — Foundations --color-primary-500/300/700 */
 .btn-primary,
 .ws-button--primary {
-  background: var(--color-primary-400);
+  background: var(--color-primary-500);
 }
 
-.btn-primary:hover:not(:disabled),
-.ws-button--primary:hover:not(:disabled),
-.ws-button--primary.ws-button--hover {
-  background: var(--color-primary-200);
+.btn-primary:hover:not(:disabled):not(.ws-button--disabled),
+.ws-button--primary:hover:not(:disabled):not(.ws-button--disabled),
+.ws-button--primary.ws-button--hover:not(.ws-button--disabled) {
+  background: var(--color-primary-300);
 }
 
-.btn-primary:focus-visible,
-.ws-button--primary:focus-visible,
-.ws-button--primary.ws-button--focus {
-  outline: none;
-  box-shadow: var(--ring);
-}
-
-.btn-primary:active:not(:disabled),
-.ws-button--primary:active:not(:disabled),
-.ws-button--primary.ws-button--pressed {
+.btn-primary:active:not(:disabled):not(.ws-button--disabled),
+.ws-button--primary:active:not(:disabled):not(.ws-button--disabled),
+.ws-button--primary.ws-button--pressed:not(.ws-button--disabled) {
   background: var(--color-primary-700);
 }
 
+/* Type=Secondary — Figma --secondarybutton/* = neutral/700, hover neutral/500 */
 .btn-secondary,
 .ws-button--secondary {
   background: var(--color-neutral-700);
 }
 
-.btn-secondary:hover:not(:disabled),
-.ws-button--secondary:hover:not(:disabled),
-.ws-button--secondary.ws-button--hover {
+.btn-secondary:hover:not(:disabled):not(.ws-button--disabled),
+.ws-button--secondary:hover:not(:disabled):not(.ws-button--disabled),
+.ws-button--secondary.ws-button--hover:not(.ws-button--disabled) {
   background: var(--color-neutral-500);
 }
 
-.btn-secondary:focus-visible,
-.ws-button--secondary:focus-visible,
-.ws-button--secondary.ws-button--focus {
+.btn-secondary:active:not(:disabled):not(.ws-button--disabled),
+.ws-button--secondary:active:not(:disabled):not(.ws-button--disabled),
+.ws-button--secondary.ws-button--pressed:not(.ws-button--disabled) {
+  background: var(--color-neutral-700);
+}
+
+.btn:focus-visible,
+.ws-button:focus-visible,
+.ws-button.ws-button--focus {
   outline: none;
   box-shadow: var(--ring);
 }
 
-.btn-secondary:active:not(:disabled),
-.ws-button--secondary:active:not(:disabled),
-.ws-button--secondary.ws-button--pressed {
-  background: var(--color-neutral-700);
-}
-
+/* Status=Disabled — Foundations neutral/200 + texto/icono neutral/600. Sin hover-disabled. */
 .btn:disabled,
 .ws-button:disabled,
-.ws-button--disabled {
+.ws-button--disabled,
+.btn:disabled:hover,
+.ws-button:disabled:hover,
+.ws-button--disabled:hover,
+.ws-button--disabled.ws-button--hover {
   background: var(--color-neutral-200);
-  color: var(--text-inverse);
+  color: var(--color-neutral-600);
   cursor: not-allowed;
-  box-shadow: none;
+}
+
+.btn:disabled .ws-button__icon,
+.ws-button:disabled .ws-button__icon,
+.ws-button--disabled .ws-button__icon {
+  color: inherit;
 }
 
 .ws-button--disabled {
   pointer-events: none;
+}
+
+/* Type=IconButton: mismo color que Primary; padding horizontal --space-md (16px) */
+.ws-button--icon {
+  gap: var(--space-sm);
+  padding-inline: var(--space-md);
+}
+
+.ws-button__icon {
+  display: block;
+  flex-shrink: 0;
+  color: var(--icon-inverse);
+}
+
+.ws-button__icon svg {
+  display: block;
+}
+
+.ws-button__icon--mobile {
+  display: none;
+}
+
+/* Device=Mobile. Figma no publica el breakpoint; se usa el de página 560px. */
+@media (max-width: 560px) {
+  .btn,
+  .ws-button {
+    gap: var(--space-xs);
+    height: 30px;
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-md);
+  }
+
+  .ws-button--icon {
+    gap: var(--space-xs);
+    padding-inline: var(--space-sm);
+  }
+
+  .ws-button__icon--desktop {
+    display: none;
+  }
+
+  .ws-button__icon--mobile {
+    display: block;
+  }
 }

@@ -37,14 +37,6 @@ function semanticRow(label, cssVar, extraStyle = "") {
 export default {
   title: "Foundations/Color",
   tags: ["autodocs"],
-  parameters: {
-    docs: {
-      description: {
-        component:
-          "Paleta de `tokens.json` y tokens semánticos expuestos en `:root` (`styles.css`).",
-      },
-    },
-  },
 };
 
 export const Paletas = {
@@ -54,10 +46,17 @@ export const Paletas = {
     const html = `
       <div class="ws-fdn">
         <h2 class="ws-fdn__title">Color</h2>
-        <p class="ws-fdn__subtitle">Escala primaria, secundaria y neutra. Valores hex desde tokens.</p>
+        <p class="ws-fdn__subtitle">Escala primaria, secundaria, neutra, semántica y acentos. Hex desde tokens.</p>
         ${scaleSection("Primary", colors.primary, "--color-primary")}
         ${scaleSection("Secondary", colors.secondary, "--color-secondary")}
         ${scaleSection("Neutral", colors.neutral, "--color-neutral")}
+        ${scaleSection("Error", colors.error, "--color-error")}
+        ${scaleSection("Warning", colors.warning, "--color-warning")}
+        ${scaleSection("Success", colors.success, "--color-success")}
+        ${scaleSection("Blue light", colors.blueLight, "--color-blue-light")}
+        ${scaleSection("Purple", colors.purple, "--color-purple")}
+        ${scaleSection("Rosé", colors.rose, "--color-rose")}
+        ${scaleSection("Orange", colors.orange, "--color-orange")}
         <div class="ws-fdn__section">
           <h3>Texto (semántico)</h3>
           <div class="ws-fdn__grid" style="grid-template-columns:repeat(auto-fill,minmax(160px,1fr))">
@@ -67,6 +66,7 @@ export const Paletas = {
             ${semanticRow("Inverse", "--text-inverse", "background:var(--text-inverse);border:1px solid var(--border-strong)")}
             ${semanticRow("Link", "--text-link")}
             ${semanticRow("Accent", "--text-accent")}
+            ${semanticRow("Titles", "--text-titles")}
           </div>
         </div>
         <div class="ws-fdn__section">
@@ -86,6 +86,13 @@ export const Paletas = {
             ${semanticRow("Subtle", "--border-subtle")}
             ${semanticRow("Strong", "--border-strong")}
             ${semanticRow("Focus", "--border-focus")}
+          </div>
+        </div>
+        <div class="ws-fdn__section">
+          <h3>Icono</h3>
+          <div class="ws-fdn__grid" style="grid-template-columns:repeat(auto-fill,minmax(160px,1fr))">
+            ${semanticRow("Primary", "--icon-primary")}
+            ${semanticRow("Inverse", "--icon-inverse", "background:var(--icon-inverse);border:1px solid var(--border-strong)")}
           </div>
         </div>
       </div>`;

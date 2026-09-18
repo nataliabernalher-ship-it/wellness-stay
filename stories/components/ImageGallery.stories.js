@@ -6,19 +6,6 @@ export default {
   tags: ["autodocs"],
   parameters: {
     layout: "centered",
-    docs: {
-      description: {
-        component: `
-Figma \`image_gallery\` (79:4879). Tile de tipo de retiro.
-
-**Uso:** pieza reutilizable (también la usa la sección Retreat Gallery).
-
-**Variantes / estados:** una variante visual. Figma no publica hover/disabled/error/loading.
-
-**Tokens:** \`--radius-md\`, \`--space-lg\`, \`--font-display\`, \`--font-body\`, \`--text-inverse\`.
-`,
-      },
-    },
   },
   argTypes: {
     title: { control: "text" },

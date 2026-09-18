@@ -12,13 +12,6 @@ const { fontFamily, fontSize, fontWeight } = tokens.typography;
 export default {
   title: "Foundations/Typography",
   tags: ["autodocs"],
-  parameters: {
-    docs: {
-      description: {
-        component: "Familias y escala tipográfica desde `tokens.json`.",
-      },
-    },
-  },
 };
 
 export const FamiliasYEscala = {
@@ -39,11 +32,11 @@ export const FamiliasYEscala = {
     const html = `
       <div class="ws-fdn">
         <h2 class="ws-fdn__title">Typography</h2>
-        <p class="ws-fdn__subtitle">Display: ${fontFamily.display} · Body: ${fontFamily.body}</p>
+        <p class="ws-fdn__subtitle">Display: ${fontFamily.display} · Body: ${fontFamily.body} · Tracking display: -2%</p>
 
         <div class="ws-fdn__section">
           <h3>Display (Fraunces)</h3>
-          <p style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,4vw,48px);line-height:1.15;color:var(--text-display);margin:0">
+          <p style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,4vw,48px);line-height:1.15;letter-spacing:var(--letter-spacing-display);color:var(--text-display);margin:0">
             Encuentra tu retiro ideal
           </p>
         </div>

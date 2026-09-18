@@ -10,19 +10,6 @@ function el(html) {
 export default {
   title: "Foundations/Grid",
   tags: ["autodocs"],
-  parameters: {
-    docs: {
-      description: {
-        component: `
-Anchos de \`layout\` en \`tokens.json\` y grids de página existentes. Figma no publica un sistema de columnas aparte de container y cardWidth.
-
-**Tokens:** container 375 / 768 / 1280, cardWidth 328 / 360 / 420.
-
-**Grids de producto:** \`.ws-card-grid\` (3 columnas), \`.types\` (3 columnas). Breakpoints de página: 1024px, 860px, 560px.
-`,
-      },
-    },
-  },
 };
 
 export const ContenedoresYGrids = {
@@ -34,11 +21,11 @@ export const ContenedoresYGrids = {
         <h2 class="ws-fdn__title">Grid</h2>
         <p class="ws-fdn__subtitle">Anchuras de referencia desde <code>tokens.json</code> y grids usados en la web.</p>
         <div class="ws-fdn__section">
-          <h3>Container</h3>
+          <h3>Grid Foundations</h3>
           <ul style="margin:0;padding-left:1.2rem;font-size:14px;line-height:1.8;color:var(--text-body)">
-            <li><strong>mobile</strong> — ${layout.container.mobile}px</li>
-            <li><strong>tablet</strong> — ${layout.container.tablet}px</li>
-            <li><strong>desktop</strong> — ${layout.container.desktop}px</li>
+            <li><strong>desktop</strong> — ${layout.grid.desktop.width}px · ${layout.grid.desktop.columns} columnas · gutter ${layout.grid.desktop.gutter}px</li>
+            <li><strong>tablet</strong> — ${layout.grid.tablet.width}px · ${layout.grid.tablet.columns} columnas · gutter ${layout.grid.tablet.gutter}px</li>
+            <li><strong>mobile</strong> — ${layout.grid.mobile.width}px · ${layout.grid.mobile.columns} columnas · gutter ${layout.grid.mobile.gutter}px</li>
           </ul>
         </div>
         <div class="ws-fdn__section">
@@ -54,7 +41,7 @@ export const ContenedoresYGrids = {
           <ul style="margin:0;padding-left:1.2rem;font-size:14px;line-height:1.8;color:var(--text-body)">
             <li><code>.ws-card-grid</code> — 3 columnas; 2 desde 1024px; 1 desde 560px</li>
             <li><code>.types</code> — 3 columnas; 2 desde 1024px; 1 desde 560px</li>
-            <li><code>.container</code> — <code>width: min(1120px, …)</code></li>
+            <li><code>.container</code> — <code>min(1280px, 100%)</code>, gutter 32px / 16px en &lt;768px</li>
           </ul>
         </div>
       </div>`;

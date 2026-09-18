@@ -6,21 +6,6 @@ export default {
   tags: ["autodocs"],
   parameters: {
     layout: "centered",
-    docs: {
-      description: {
-        component: `
-Enlace de texto del repositorio (\`components/link/link.css\`). No hay componente Link publicado en Figma.
-
-**Uso:** navegación inline. \`muted\` para pies y textos secundarios.
-
-**Variantes:** default (\`--text-link\`), muted (\`--text-body\`).
-
-**Estados:** hover (subrayado en default; color display en muted). No hay focus/disabled/error/loading en el CSS verificado.
-
-**Tokens:** \`--text-link\`, \`--text-body\`, \`--text-display\`.
-`,
-      },
-    },
   },
   argTypes: {
     text: { control: "text" },

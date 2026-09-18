@@ -10,13 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=5" />
-    <link rel="stylesheet" href="./css/index.css?v=9" />
+    <link rel="stylesheet" href="./styles.css?v=7" />
+    <link rel="stylesheet" href="./css/index.css?v=14" />
   </head>
   <body>
     <header class="site-header site-header--over-media">
       <div class="site-header__wrap">
-        <nav class="ws-navigation glass" aria-label="Navegación principal">
+        <nav class="ws-navigation" aria-label="Navegación principal">
           <a class="ws-navigation__logo" href="./index.html" aria-label="Inicio WellnessStay">WellnessStay.</a>
           <div class="ws-navigation__end">
             <a class="ws-navigation__host" href="#">Ser anfitrión</a>
@@ -71,60 +71,72 @@
             <h1>Encuentra tu retiro de salud y bienestar</h1>
           </div>
 
-          <form class="ws-search" action="./resultados.html" method="get" role="search" aria-label="Buscador de retiros">
-            <div class="ws-search__bar glass">
-              <label class="ws-search__segment ws-search__segment--where">
-                <span class="ws-search__label">Donde</span>
-                <input
-                  class="ws-search__input"
-                  type="search"
-                  name="donde"
-                  placeholder="Busca el destino"
-                  autocomplete="off"
-                />
-              </label>
-              <span class="ws-search__divider" aria-hidden="true"></span>
-              <label class="ws-search__segment ws-search__segment--arrival">
-                <span class="ws-search__label">Llegada</span>
-                <input
-                  class="ws-search__input"
-                  type="date"
-                  name="llegada"
-                  autocomplete="off"
-                />
-              </label>
-              <span class="ws-search__divider" aria-hidden="true"></span>
-              <label class="ws-search__segment ws-search__segment--departure">
-                <span class="ws-search__label">Salida</span>
-                <input
-                  class="ws-search__input"
-                  type="date"
-                  name="salida"
-                  autocomplete="off"
-                />
-              </label>
-              <span class="ws-search__divider" aria-hidden="true"></span>
-              <label class="ws-search__segment ws-search__segment--guests">
-                <span class="ws-search__label">Personas</span>
-                <select class="ws-search__input ws-search__select" name="personas" aria-label="Número de personas">
-                  <option value="" selected>Añade personas</option>
-                  <option value="1">1 persona</option>
-                  <option value="2">2 personas</option>
-                  <option value="3">3 personas</option>
-                  <option value="4">4 personas</option>
-                  <option value="5">5+ personas</option>
-                </select>
-              </label>
-              <button class="ws-search__submit" type="submit" aria-label="Buscar retiros">
-                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    fill="currentColor"
-                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </form>
+<form class="ws-search" action="./resultados.html" method="get" role="search" aria-label="Buscador de retiros">
+  <div class="ws-search__bar">
+    <label class="ws-search__segment ws-search__segment--where">
+      <span class="ws-search__label">A donde quieres ir</span>
+      <span class="ws-search__control">
+        <input
+          class="ws-search__input"
+          type="search"
+          name="donde"
+          placeholder="Elige un destino"
+          autocomplete="off"
+        />
+        <span class="ws-search__chevron" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </span>
+    </label>
+    <div class="ws-search__segment ws-search__segment--dates">
+      <span class="ws-search__label" id="ws-search-dates-label">Fechas</span>
+      <span class="ws-search__control">
+        <input class="ws-search__input" type="date" name="llegada" aria-labelledby="ws-search-dates-label" autocomplete="off" />
+        <input class="ws-search__input" type="date" name="salida" aria-label="Salida" autocomplete="off" />
+        <span class="ws-search__chevron" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <label class="ws-search__segment ws-search__segment--guests">
+      <span class="ws-search__label">Personas</span>
+      <span class="ws-search__control">
+        <select class="ws-search__input ws-search__select" name="personas" aria-label="Número de personas">
+          <option value="" selected>Personas</option>
+          <option value="1">1 persona</option>
+          <option value="2">2 personas</option>
+          <option value="3">3 personas</option>
+          <option value="4">4 personas</option>
+          <option value="5">5+ personas</option>
+        </select>
+        <span class="ws-search__chevron" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </span>
+    </label>
+    <button class="ws-button ws-button--primary ws-button--icon ws-search__submit" type="submit">
+      Buscar
+      <span class="ws-button__icon ws-button__icon--desktop" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
+          <path d="M11.29 8.71L13.59 11H7V13H13.59L11.29 15.29L12.71 16.71L17.41 12L12.71 7.29L11.29 8.71Z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="ws-button__icon ws-button__icon--mobile" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 1.33333C4.32667 1.33333 1.33333 4.32667 1.33333 8C1.33333 11.6733 4.32667 14.6667 8 14.6667C11.6733 14.6667 14.6667 11.6733 14.6667 8C14.6667 4.32667 11.6733 1.33333 8 1.33333ZM8 13.3333C5.06 13.3333 2.66667 10.94 2.66667 8C2.66667 5.06 5.06 2.66667 8 2.66667C10.94 2.66667 13.3333 5.06 13.3333 8C13.3333 10.94 10.94 13.3333 8 13.3333Z" fill="currentColor"/>
+          <path d="M7.52667 5.80667L9.06 7.33333H4.66667V8.66667H9.06L7.52667 10.1933L8.47333 11.14L11.6067 8L8.47333 4.86L7.52667 5.80667Z" fill="currentColor"/>
+        </svg>
+      </span>
+    </button>
+  </div>
+</form>
 
 
         </div>
@@ -142,73 +154,157 @@
 
           <div class="ws-card-grid">
             <article class="ws-card">
-              <div class="ws-card__media" aria-hidden="true" data-img="mountain"></div>
-              <div class="ws-card__content glass glass--light">
-                <h3 class="ws-card__title">Silencio en la montaña</h3>
-                <p class="ws-card__location">Pirineos, España</p>
+              <div class="ws-card__media" data-img="mountain">
+                <div class="ws-card__media-top">
+                  <span class="ws-card__tag"><span class="ws-card__tag-icon" aria-hidden="true"></span>Meditación</span>
+                  <button class="ws-card__like" type="button" aria-label="Guardar"></button>
+                </div>
+                <span class="ws-card__dots" aria-hidden="true"></span>
+              </div>
+              <div class="ws-card__content">
+                <div class="ws-card__top">
+                  <p class="ws-card__score"><span>9, 4</span><span class="ws-card__score-icon" aria-hidden="true"></span></p>
+                  <h3 class="ws-card__title">Silencio en la montaña</h3>
+                  <p class="ws-card__location">Pirineos, España</p>
+                  <p class="ws-card__description">Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                  <p class="ws-card__details">Cancelacion gratuita</p>
+                </div>
                 <div class="ws-card__footer">
-                  <p class="ws-card__extra">5 noches</p>
-                  <p class="ws-card__price glass glass--light">420€</p>
+                  <p class="ws-card__extra">Meditación</p>
+                  <p class="ws-card__price-group">
+                    <span class="ws-card__price-label">5 noches desde</span>
+                    <span class="ws-card__price">420€</span>
+                  </p>
                 </div>
               </div>
             </article>
 
             <article class="ws-card">
-              <div class="ws-card__media" aria-hidden="true" data-img="beach"></div>
-              <div class="ws-card__content glass glass--light">
-                <h3 class="ws-card__title">Flow &amp; mar</h3>
-                <p class="ws-card__location">Mallorca, España</p>
+              <div class="ws-card__media" data-img="beach">
+                <div class="ws-card__media-top">
+                  <span class="ws-card__tag"><span class="ws-card__tag-icon" aria-hidden="true"></span>Yoga</span>
+                  <button class="ws-card__like" type="button" aria-label="Guardar"></button>
+                </div>
+                <span class="ws-card__dots" aria-hidden="true"></span>
+              </div>
+              <div class="ws-card__content">
+                <div class="ws-card__top">
+                  <p class="ws-card__score"><span>9, 4</span><span class="ws-card__score-icon" aria-hidden="true"></span></p>
+                  <h3 class="ws-card__title">Flow &amp; mar</h3>
+                  <p class="ws-card__location">Mallorca, España</p>
+                  <p class="ws-card__description">Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                  <p class="ws-card__details">Cancelacion gratuita</p>
+                </div>
                 <div class="ws-card__footer">
-                  <p class="ws-card__extra">3 noches</p>
-                  <p class="ws-card__price glass glass--light">310€</p>
+                  <p class="ws-card__extra">Yoga</p>
+                  <p class="ws-card__price-group">
+                    <span class="ws-card__price-label">3 noches desde</span>
+                    <span class="ws-card__price">310€</span>
+                  </p>
                 </div>
               </div>
             </article>
 
             <article class="ws-card">
-              <div class="ws-card__media" aria-hidden="true" data-img="forest"></div>
-              <div class="ws-card__content glass glass--light">
-                <h3 class="ws-card__title">Reinicio natural</h3>
-                <p class="ws-card__location">Asturias, España</p>
+              <div class="ws-card__media" data-img="forest">
+                <div class="ws-card__media-top">
+                  <span class="ws-card__tag"><span class="ws-card__tag-icon" aria-hidden="true"></span>Detox</span>
+                  <button class="ws-card__like" type="button" aria-label="Guardar"></button>
+                </div>
+                <span class="ws-card__dots" aria-hidden="true"></span>
+              </div>
+              <div class="ws-card__content">
+                <div class="ws-card__top">
+                  <p class="ws-card__score"><span>9, 4</span><span class="ws-card__score-icon" aria-hidden="true"></span></p>
+                  <h3 class="ws-card__title">Reinicio natural</h3>
+                  <p class="ws-card__location">Asturias, España</p>
+                  <p class="ws-card__description">Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                  <p class="ws-card__details">Cancelacion gratuita</p>
+                </div>
                 <div class="ws-card__footer">
-                  <p class="ws-card__extra">7 noches</p>
-                  <p class="ws-card__price glass glass--light">590€</p>
+                  <p class="ws-card__extra">Detox</p>
+                  <p class="ws-card__price-group">
+                    <span class="ws-card__price-label">7 noches desde</span>
+                    <span class="ws-card__price">590€</span>
+                  </p>
                 </div>
               </div>
             </article>
 
             <article class="ws-card">
-              <div class="ws-card__media" aria-hidden="true" data-img="4"></div>
-              <div class="ws-card__content glass glass--light">
-                <h3 class="ws-card__title">Claridad &amp; enfoque</h3>
-                <p class="ws-card__location">Costa Brava, España</p>
+              <div class="ws-card__media" data-img="4">
+                <div class="ws-card__media-top">
+                  <span class="ws-card__tag"><span class="ws-card__tag-icon" aria-hidden="true"></span>Mindfulness</span>
+                  <button class="ws-card__like" type="button" aria-label="Guardar"></button>
+                </div>
+                <span class="ws-card__dots" aria-hidden="true"></span>
+              </div>
+              <div class="ws-card__content">
+                <div class="ws-card__top">
+                  <p class="ws-card__score"><span>9, 4</span><span class="ws-card__score-icon" aria-hidden="true"></span></p>
+                  <h3 class="ws-card__title">Claridad &amp; enfoque</h3>
+                  <p class="ws-card__location">Costa Brava, España</p>
+                  <p class="ws-card__description">Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                  <p class="ws-card__details">Cancelacion gratuita</p>
+                </div>
                 <div class="ws-card__footer">
-                  <p class="ws-card__extra">4 noches</p>
-                  <p class="ws-card__price glass glass--light">380€</p>
+                  <p class="ws-card__extra">Mindfulness</p>
+                  <p class="ws-card__price-group">
+                    <span class="ws-card__price-label">4 noches desde</span>
+                    <span class="ws-card__price">380€</span>
+                  </p>
                 </div>
               </div>
             </article>
 
             <article class="ws-card">
-              <div class="ws-card__media" aria-hidden="true" data-img="yoga"></div>
-              <div class="ws-card__content glass glass--light">
-                <h3 class="ws-card__title">Alma de yoga</h3>
-                <p class="ws-card__location">Ibiza, España</p>
+              <div class="ws-card__media" data-img="yoga">
+                <div class="ws-card__media-top">
+                  <span class="ws-card__tag"><span class="ws-card__tag-icon" aria-hidden="true"></span>Yoga</span>
+                  <button class="ws-card__like" type="button" aria-label="Guardar"></button>
+                </div>
+                <span class="ws-card__dots" aria-hidden="true"></span>
+              </div>
+              <div class="ws-card__content">
+                <div class="ws-card__top">
+                  <p class="ws-card__score"><span>9, 4</span><span class="ws-card__score-icon" aria-hidden="true"></span></p>
+                  <h3 class="ws-card__title">Alma de yoga</h3>
+                  <p class="ws-card__location">Ibiza, España</p>
+                  <p class="ws-card__description">Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                  <p class="ws-card__details">Cancelacion gratuita</p>
+                </div>
                 <div class="ws-card__footer">
-                  <p class="ws-card__extra">5 noches</p>
-                  <p class="ws-card__price glass glass--light">450€</p>
+                  <p class="ws-card__extra">Yoga</p>
+                  <p class="ws-card__price-group">
+                    <span class="ws-card__price-label">5 noches desde</span>
+                    <span class="ws-card__price">450€</span>
+                  </p>
                 </div>
               </div>
             </article>
 
             <article class="ws-card">
-              <div class="ws-card__media" aria-hidden="true" data-img="spa"></div>
-              <div class="ws-card__content glass glass--light">
-                <h3 class="ws-card__title">Spa &amp; silencio</h3>
-                <p class="ws-card__location">Andalucía, España</p>
+              <div class="ws-card__media" data-img="spa">
+                <div class="ws-card__media-top">
+                  <span class="ws-card__tag"><span class="ws-card__tag-icon" aria-hidden="true"></span>Spa</span>
+                  <button class="ws-card__like" type="button" aria-label="Guardar"></button>
+                </div>
+                <span class="ws-card__dots" aria-hidden="true"></span>
+              </div>
+              <div class="ws-card__content">
+                <div class="ws-card__top">
+                  <p class="ws-card__score"><span>9, 4</span><span class="ws-card__score-icon" aria-hidden="true"></span></p>
+                  <h3 class="ws-card__title">Spa &amp; silencio</h3>
+                  <p class="ws-card__location">Andalucía, España</p>
+                  <p class="ws-card__description">Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                  <p class="ws-card__details">Cancelacion gratuita</p>
+                </div>
                 <div class="ws-card__footer">
-                  <p class="ws-card__extra">3 noches</p>
-                  <p class="ws-card__price glass glass--light">520€</p>
+                  <p class="ws-card__extra">Spa</p>
+                  <p class="ws-card__price-group">
+                    <span class="ws-card__price-label">3 noches desde</span>
+                    <span class="ws-card__price">520€</span>
+                  </p>
                 </div>
               </div>
             </article>
@@ -292,7 +388,7 @@
 
       <section class="section newsletter" aria-label="Suscripción a newsletter">
         <div class="container">
-          <div class="newsletter-card glass glass--strong">
+          <div class="newsletter-card">
             <div class="newsletter-copy">
               <h2>Consejos wellness en tu inbox</h2>
               <p class="newsletter-copy">
