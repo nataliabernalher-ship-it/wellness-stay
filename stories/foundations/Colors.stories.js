@@ -46,16 +46,13 @@ export const Paletas = {
     const html = `
       <div class="ws-fdn">
         <h2 class="ws-fdn__title">Color</h2>
-        <p class="ws-fdn__subtitle">Escala primaria, secundaria, neutra, semántica y acentos. Hex desde tokens.</p>
+        <p class="ws-fdn__subtitle">Primary, secondary, neutra, acentos soft/strong y semánticos. Hex desde tokens.</p>
         ${scaleSection("Primary", colors.primary, "--color-primary")}
         ${scaleSection("Secondary", colors.secondary, "--color-secondary")}
         ${scaleSection("Neutral", colors.neutral, "--color-neutral")}
-        ${scaleSection("Error", colors.error, "--color-error")}
-        ${scaleSection("Warning", colors.warning, "--color-warning")}
-        ${scaleSection("Success", colors.success, "--color-success")}
-        ${scaleSection("Blue light", colors.blueLight, "--color-blue-light")}
-        ${scaleSection("Purple", colors.purple, "--color-purple")}
-        ${scaleSection("Rosé", colors.rose, "--color-rose")}
+        ${scaleSection("Blue", colors.blue, "--color-blue")}
+        ${scaleSection("Red", colors.red, "--color-red")}
+        ${scaleSection("Green", colors.green, "--color-green")}
         ${scaleSection("Orange", colors.orange, "--color-orange")}
         <div class="ws-fdn__section">
           <h3>Texto (semántico)</h3>
@@ -86,6 +83,10 @@ export const Paletas = {
             ${semanticRow("Subtle", "--border-subtle")}
             ${semanticRow("Strong", "--border-strong")}
             ${semanticRow("Focus", "--border-focus")}
+            ${semanticRow("Error", "--border-error")}
+            ${semanticRow("Info", "--border-info")}
+            ${semanticRow("Success", "--border-success")}
+            ${semanticRow("Warning", "--border-warning")}
           </div>
         </div>
         <div class="ws-fdn__section">

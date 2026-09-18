@@ -1,0 +1,31 @@
+/* Figma WellnessStay Components / buton-group (2017:1564)
+   Property 1: desktop | moble (mobile). Compone Button Primary + Secondary.
+   Clases públicas: .ws-button-group, --mobile. */
+
+.ws-button-group {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: var(--space-xs);
+}
+
+.ws-button-group--mobile {
+  align-items: center;
+}
+
+/* Device=Mobile. Figma no publica el breakpoint; se usa el de Button/página 560px.
+   --mobile permite documentar la variante en Storybook sin cambiar el viewport. */
+.ws-button-group--mobile .btn,
+.ws-button-group--mobile .ws-button {
+  gap: var(--space-xs);
+  height: 30px;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-md);
+}
+
+@media (max-width: 560px) {
+  .ws-button-group {
+    align-items: center;
+  }
+}

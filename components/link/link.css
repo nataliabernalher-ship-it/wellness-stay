@@ -1,23 +1,48 @@
-/* Figma: link */
+/* Figma WellnessStay Components / link (2009:280)
+   Device: desktop | mobile (mismos estilos). Status: Default | hover.
+   Clases públicas: .link, .ws-link, --muted, --hover, --mobile. */
 
 .link,
 .ws-link {
-  color: var(--text-link);
-  font-weight: 700;
-  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-style: normal;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-text-lg);
+  color: var(--color-primary-400);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-underline-position: from-font;
 }
 
 .link:hover,
-.ws-link:hover {
-  text-decoration: underline;
+.ws-link:hover,
+.ws-link--hover {
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--font-size-xs);
+  color: var(--color-primary-200);
 }
 
+.ws-link:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+/* API existente en footer; no está en el componente Figma. */
 .ws-link--muted {
   color: var(--text-body);
   font-weight: 600;
+  font-style: normal;
+  font-size: var(--font-size-sm);
+  text-decoration: none;
 }
 
-.ws-link--muted:hover {
+.ws-link--muted:hover,
+.ws-link--muted.ws-link--hover {
   color: var(--text-display);
+  font-weight: 600;
+  font-style: normal;
+  font-size: var(--font-size-sm);
   text-decoration: none;
 }

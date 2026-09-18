@@ -1,14 +1,19 @@
 import { escapeHtml } from "../html.js";
 
+const TYPES = ["cuadrado", "rectangulo", "alargado"];
+
 export function renderImageGallery({
-  title = "Retiros de Meditación",
-  subtitle = "Ubicación del retiro",
+  title = "Here is the title",
+  subtitle = "A subtext is written here",
   image = "mountain",
   href = "",
   label = "",
+  type = "cuadrado",
 } = {}) {
+  const safeType = TYPES.includes(type) ? type : "cuadrado";
   const aria = label ? ` aria-label="${escapeHtml(label)}"` : "";
   const img = escapeHtml(image);
+  const className = `ws-image-gallery ws-image-gallery--${safeType}`;
   const inner = `
   <div class="ws-image-gallery__media" aria-hidden="true"></div>
   <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
@@ -20,8 +25,8 @@ export function renderImageGallery({
   </div>`;
 
   if (href) {
-    return `<a class="ws-image-gallery" href="${escapeHtml(href)}" data-img="${img}"${aria}>${inner}</a>`;
+    return `<a class="${className}" href="${escapeHtml(href)}" data-img="${img}"${aria}>${inner}</a>`;
   }
 
-  return `<article class="ws-image-gallery" data-img="${img}">${inner}</article>`;
+  return `<article class="${className}" data-img="${img}">${inner}</article>`;
 }

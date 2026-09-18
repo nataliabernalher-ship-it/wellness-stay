@@ -1,0 +1,88 @@
+/* Figma WellnessStay Components / tags (2011:4232)
+   type: color | light | icon | oferta. size: big | small.
+   Clases públicas: .ws-tag, --color, --light, --icon, --oferta, --big, --small. */
+
+.ws-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: var(--radius-4);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-text-xs);
+  white-space: nowrap;
+}
+
+.ws-tag--color {
+  background: var(--color-secondary-500);
+  color: var(--text-inverse);
+}
+
+.ws-tag--color.ws-tag--big {
+  padding: var(--space-xs) var(--space-md);
+}
+
+.ws-tag--color.ws-tag--small {
+  padding: var(--space-xs);
+}
+
+.ws-tag--light {
+  background: var(--bg-accent);
+  border: 1px solid var(--border-focus);
+  color: var(--text-display);
+}
+
+.ws-tag--light.ws-tag--big {
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.ws-tag--light.ws-tag--small {
+  padding: var(--padding-xs) var(--space-xs);
+}
+
+.ws-tag--icon {
+  gap: var(--space-xs);
+  background: var(--bg-primary);
+  color: var(--text-display);
+}
+
+.ws-tag--icon.ws-tag--big {
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.ws-tag--icon.ws-tag--small {
+  padding: var(--padding-xs) var(--space-xs);
+}
+
+.ws-tag__icon {
+  display: block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: url("./assets/zap-big.svg") no-repeat center;
+  background-size: 20px 20px;
+}
+
+.ws-tag--small .ws-tag__icon {
+  width: 16px;
+  height: 16px;
+  background-image: url("./assets/zap-small.svg");
+  background-size: 16px 16px;
+}
+
+.ws-tag--oferta {
+  background: var(--color-red-strong);
+  color: var(--text-inverse);
+}
+
+.ws-tag--oferta.ws-tag--big {
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.ws-tag--oferta.ws-tag--small {
+  gap: var(--space-xs);
+  padding: var(--padding-xs) var(--space-xs);
+}

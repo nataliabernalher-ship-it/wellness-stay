@@ -1,21 +1,34 @@
-/* Figma: image_gallery (79:4879) — tokens: padding/xl, padding/sm, radius/md, display/xs, text/md */
+/* Figma WellnessStay Components / images (2083:4034)
+   type: image-cuadrado | image-rectangulo | image-alargado (estilo, no Device).
+   Todos escalan al ancho del contenedor y conservan su proporción.
+   Clases públicas: .ws-image-gallery, --cuadrado, --rectangulo, --alargado,
+   __media, __scrim, __content-card, __content, __title, __subtitle. */
 
-.ws-image-gallery {
+.ws-image-gallery,
+.ws-image-gallery--cuadrado {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 384px;
+  width: 100%;
   max-width: 100%;
-  aspect-ratio: 384 / 358;
   height: auto;
-  min-height: 0;
-  padding: var(--space-lg);
-  border-radius: var(--radius-md);
+  aspect-ratio: 268 / 268;
+  padding: var(--space-md);
+  border-radius: var(--radius-xs);
   overflow: hidden;
   isolation: isolate;
   background-color: var(--color-neutral-200);
+}
+
+.ws-image-gallery--rectangulo {
+  aspect-ratio: 368 / 311;
+}
+
+.ws-image-gallery--alargado {
+  aspect-ratio: 368 / 483;
 }
 
 a.ws-image-gallery {
@@ -45,7 +58,7 @@ a.ws-image-gallery:focus-visible {
   z-index: 1;
   border-radius: inherit;
   pointer-events: none;
-  background: rgba(0, 0, 0, 0.2);
+  background: color-mix(in srgb, var(--text-titles) 50%, transparent);
 }
 
 .ws-image-gallery[data-img="1"] .ws-image-gallery__media,
@@ -100,8 +113,7 @@ a.ws-image-gallery:focus-visible {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: var(--space-md) 12px;
-  border-radius: var(--radius-md);
+  padding: 0;
   background: transparent;
 }
 
@@ -110,28 +122,37 @@ a.ws-image-gallery:focus-visible {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
   width: 100%;
   text-align: center;
 }
 
 .ws-image-gallery__title {
   margin: 0;
+  width: 100%;
   font-family: var(--font-display);
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 37px;
-  letter-spacing: -1.2px;
+  font-weight: 700;
+  font-size: var(--font-size-display-2xs);
+  line-height: var(--font-size-display-md);
   color: var(--text-inverse);
   text-align: center;
 }
 
+.ws-image-gallery--rectangulo .ws-image-gallery__title {
+  font-size: var(--font-size-xl);
+}
+
+.ws-image-gallery--alargado .ws-image-gallery__title {
+  font-size: var(--font-size-display-xs);
+}
+
 .ws-image-gallery__subtitle {
   margin: 0;
+  width: 100%;
   font-family: var(--font-body);
-  font-size: 16px;
   font-weight: 500;
-  line-height: 16.22px;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-xs);
   color: var(--text-inverse);
   text-align: center;
 }
