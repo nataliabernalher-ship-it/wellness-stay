@@ -23,10 +23,10 @@ const preview = {
         order: [
           "Foundations",
           "Components",
-          ["Button", "Button Group", "Link", "Input", "Tag", "Card", "Image Gallery"],
+          ["Button", "Button Group", "Link", "Input", "Tag", "Card", "Image Gallery", "Newsletter Form"],
           "Patterns",
           "Sections",
-          ["Hero", "Retreat Gallery", "Footer"],
+          ["Hero", "Retreat Gallery", "Newsletter", "Footer"],
         ],
       },
     },

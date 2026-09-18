@@ -10,8 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=12" />
-    <link rel="stylesheet" href="./css/index.css?v=25" />
+    <link rel="stylesheet" href="./styles.css?v=15" />
+    <link rel="stylesheet" href="./css/index.css?v=27" />
   </head>
   <body>
     <header class="site-header site-header--over-media">
@@ -388,38 +388,31 @@
 
       <section class="section newsletter" aria-label="Suscripción a newsletter">
         <div class="container">
-          <div class="newsletter-card">
-            <div class="newsletter-copy">
-              <h2>Consejos wellness en tu inbox</h2>
-              <p class="newsletter-copy">
-                Ideas simples para dormir mejor, moverte con intención, comer más consciente y sostener hábitos que sí duran.
-              </p>
-              <ul class="newsletter-points" aria-label="Qué recibirás">
-                <li>Rutinas cortas y prácticas (5–10 min)</li>
-                <li>Guías para bajar el estrés y recuperar foco</li>
-                <li>Recomendaciones de retiros y experiencias</li>
-              </ul>
-            </div>
+<!-- Figma: WellnessStay Components / newsletter-form (2217:74)
+     Device desktop (2216:68) | mobile (2217:75). El layout móvil lo aplica CSS a 560px. -->
+<form class="ws-newsletter-form" action="#" method="post">
+  <p class="ws-newsletter-form__title">Consejos wellness en tu inbox</p>
+  <p class="ws-newsletter-form__text">
+    Ideas simples para dormir mejor, moverte con intención, comer más consciente y sostener hábitos que sí duran.
+  </p>
+  <div class="ws-newsletter-form__row">
+    <div class="ws-input">
+      <input
+        class="ws-input__field"
+        type="email"
+        name="email"
+        id="ws-newsletter-email"
+        placeholder="Email"
+        autocomplete="email"
+        inputmode="email"
+        aria-label="Email"
+        required
+      />
+    </div>
+    <button class="btn ws-button btn-primary ws-button--primary ws-button--small" type="submit">Aceptar</button>
+  </div>
+</form>
 
-            <form class="newsletter-form" action="#" method="post">
-              <label class="field newsletter-field">
-                <span class="field-label">Email</span>
-                <input
-                  class="field-input"
-                  name="email"
-                  type="email"
-                  inputmode="email"
-                  autocomplete="email"
-                  placeholder="tu@email.com"
-                  required
-                />
-              </label>
-              <button class="ws-button ws-button--primary ws-button--full" type="submit">Suscribirme</button>
-              <p class="newsletter-legal">
-                Al suscribirte aceptas recibir correos. Puedes darte de baja cuando quieras.
-              </p>
-            </form>
-          </div>
         </div>
       </section>
 

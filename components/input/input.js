@@ -11,6 +11,10 @@ export function renderInput({
   type = "text",
   name = "",
   id = "",
+  required = false,
+  autocomplete = "",
+  inputmode = "",
+  ariaLabel = "",
 } = {}) {
   const safeStatus = STATUSES.includes(status) ? status : "default";
   const filledValue = safeStatus === "filled" && !value ? "Text" : value;
@@ -24,10 +28,14 @@ export function renderInput({
   const fieldId = id ? escapeHtml(id) : "";
   const nameAttr = name ? ` name="${escapeHtml(name)}"` : "";
   const idAttr = fieldId ? ` id="${fieldId}"` : "";
+  const requiredAttr = required ? " required" : "";
+  const autoAttr = autocomplete ? ` autocomplete="${escapeHtml(autocomplete)}"` : "";
+  const modeAttr = inputmode ? ` inputmode="${escapeHtml(inputmode)}"` : "";
+  const ariaAttr = ariaLabel ? ` aria-label="${escapeHtml(ariaLabel)}"` : "";
   const labelMarkup = showLabel
     ? `<span class="ws-input__label">${escapeHtml(label)}</span>`
     : "";
-  const field = `<input class="ws-input__field" type="${escapeHtml(type)}"${nameAttr}${idAttr} value="${escapeHtml(filledValue)}" placeholder="${escapeHtml(placeholder)}" />`;
+  const field = `<input class="ws-input__field" type="${escapeHtml(type)}"${nameAttr}${idAttr} value="${escapeHtml(filledValue)}" placeholder="${escapeHtml(placeholder)}"${requiredAttr}${autoAttr}${modeAttr}${ariaAttr} />`;
 
   if (showLabel) {
     return `<label class="${className}">${labelMarkup}${field}</label>`;

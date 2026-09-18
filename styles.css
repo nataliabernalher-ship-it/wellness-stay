@@ -346,69 +346,22 @@ h2 {
   color: var(--text-body);
 }
 
-/* Newsletter */
+/* Newsletter — compone ws-newsletter-form (Figma 2216:68) */
 .newsletter {
   position: relative;
-  background:
-    linear-gradient(180deg, rgba(16, 24, 40, 0.58), rgba(16, 24, 40, 0.42)),
-    url("./assets/newsletter-image.jpg");
+  background: url("./assets/newsletter-image.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.newsletter-card {
-  display: grid;
-  gap: var(--space-xl);
-  padding: clamp(18px, 3vw, 28px);
-  border-radius: var(--radius-md);
-  background:
-    radial-gradient(620px 220px at 18% 0%, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 60%),
-    radial-gradient(520px 220px at 100% 10%, rgba(148, 201, 199, 0.22), rgba(148, 201, 199, 0) 60%),
-    rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  box-shadow: var(--shadow-sm);
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
+.newsletter .container {
+  display: flex;
+  justify-content: center;
 }
 
-.newsletter-card {
-  grid-template-columns: 1.2fr 0.8fr;
-  align-items: start;
-}
-
-.newsletter-copy h2,p {
-  margin-bottom: 8px;
-  color: var(--text-inverse);
-}
-
-.newsletter-points {
-  margin: var(--space-md) 0 0;
-  padding-left: 18px;
-  color: var(--text-inverse);
-  display: grid;
-  gap: 6px;
-}
-
-.newsletter-form {
-  display: grid;
-  gap: var(--space-sm);
-  align-content: start;
-}
-
-.newsletter-field {
-  min-width: auto;
-}
-
-.newsletter-form .btn,
-.newsletter-form .ws-button {
-  width: 100%;
-}
-
-.newsletter-legal {
-  margin: 4px 0 0;
-  color: var(--text-inverse);
-  font-size: 13px;
+.newsletter .ws-newsletter-form {
+  margin-inline: auto;
 }
 
 /* Types grid — compone ws-image-gallery */
@@ -424,7 +377,8 @@ h2 {
 }
 
 /* Footer — Figma WellnessStay Components / footer (2178:3752)
-   Device: desktop | tablet | mobile. Clases públicas: .footer, __top, __nav, __brand, .footer-links. */
+   Device: desktop | tablet | mobile. Clases públicas: .footer, __top, __nav, __brand, .footer-links.
+   Desktop footer-top: padding-block padding/4xl 64px → --space-3xl. */
 .footer {
   background: var(--bg-inverse);
   color: var(--text-inverse);
@@ -443,7 +397,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   row-gap: 120px;
-  padding: var(--space-xl) var(--space-lg);
+  padding: var(--space-3xl) var(--space-lg);
 }
 
 .footer-nav {
@@ -504,6 +458,10 @@ h2 {
   padding: var(--space-sm) 0 var(--space-xs);
 }
 
+.footer--tablet .footer-top {
+  padding-block: var(--space-xl);
+}
+
 .footer--tablet .footer-nav {
   flex-basis: 521px;
   width: 521px;
@@ -517,7 +475,7 @@ h2 {
 
 .footer--mobile .footer-top {
   justify-content: center;
-  padding-inline: var(--space-md);
+  padding: var(--space-xl) var(--space-md);
 }
 
 .footer--mobile .footer-nav {
@@ -535,13 +493,13 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .newsletter-card {
-    grid-template-columns: 1fr;
-  }
-
   .footer-nav {
     flex-basis: 521px;
     width: 521px;
+  }
+
+  .footer-top {
+    padding-block: var(--space-xl);
   }
 
   .footer-links {
@@ -583,7 +541,7 @@ h2 {
 
 .footer.footer--desktop .footer-top {
   justify-content: space-between;
-  padding-inline: var(--space-lg);
+  padding: var(--space-3xl) var(--space-lg);
 }
 
 .footer.footer--desktop .footer-links {

@@ -1,0 +1,120 @@
+/* Figma WellnessStay Components / newsletter-form (2217:74)
+   Device: desktop (2216:68, 700) | mobile (2217:75, 328). Compone Input + Button.
+   Clases públicas: .ws-newsletter-form, --desktop, --mobile, __title, __text, __row.
+   Figma no publica el breakpoint; se usa el de página 560px. */
+
+.ws-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 700px;
+  padding: var(--space-lg);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xs);
+  background: var(--bg-primary);
+}
+
+.ws-newsletter-form__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--font-size-display-xs);
+  line-height: var(--line-height-md);
+  color: var(--text-display);
+  text-align: center;
+}
+
+.ws-newsletter-form__text {
+  margin: 0;
+  width: 100%;
+  max-width: 410px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  color: var(--text-body);
+  text-align: center;
+}
+
+.ws-newsletter-form__row {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-xs);
+  width: 100%;
+  max-width: 497px;
+}
+
+.ws-newsletter-form__row .ws-input {
+  flex: 1 0 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.ws-newsletter-form__row .ws-button {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.ws-newsletter-form--mobile {
+  max-width: 328px;
+  padding: var(--space-md);
+}
+
+.ws-newsletter-form--mobile .ws-newsletter-form__title {
+  font-size: var(--font-size-display-2xs);
+  line-height: var(--line-height-sm);
+}
+
+.ws-newsletter-form--mobile .ws-newsletter-form__text {
+  max-width: 300px;
+}
+
+.ws-newsletter-form--mobile .ws-newsletter-form__row {
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 300px;
+}
+
+.ws-newsletter-form--mobile .ws-button {
+  width: 100%;
+  height: var(--space-10);
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--font-size-md);
+  line-height: 16px;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 560px) {
+  .ws-newsletter-form {
+    max-width: 328px;
+    padding: var(--space-md);
+  }
+
+  .ws-newsletter-form__title {
+    font-size: var(--font-size-display-2xs);
+    line-height: var(--line-height-sm);
+  }
+
+  .ws-newsletter-form__text {
+    max-width: 300px;
+  }
+
+  .ws-newsletter-form__row {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 300px;
+  }
+
+  .ws-newsletter-form .ws-button {
+    width: 100%;
+    height: var(--space-10);
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-md);
+    line-height: 16px;
+    gap: var(--space-sm);
+  }
+}
