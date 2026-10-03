@@ -40,7 +40,7 @@ export const ContenedoresYGrids = {
           <h3>Grids de página</h3>
           <ul style="margin:0;padding-left:1.2rem;font-size:14px;line-height:1.8;color:var(--text-body)">
             <li><code>.ws-card-grid</code> — 4 columnas; 2 desde 1024px; 1 desde 560px</li>
-            <li><code>.types</code> — 3 columnas; 2 desde 1024px; 1 desde 560px</li>
+            <li><code>.types-scroll</code> — fila full-bleed sticky (scroll vertical → horizontal)</li>
             <li><code>.container</code> — <code>min(1280px, 100%)</code>, gutter 32px / 16px en &lt;768px</li>
           </ul>
         </div>

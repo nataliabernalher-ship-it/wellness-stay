@@ -225,7 +225,7 @@ a {
 .hero {
   position: relative;
   margin-top: -96px;
-  padding: 156px 0 120px;
+  padding: 156px 0 240px;
   overflow: hidden;
   isolation: isolate;
 }
@@ -349,13 +349,25 @@ h2 {
 /* Newsletter — compone ws-newsletter-form (Figma 2216:68) */
 .newsletter {
   position: relative;
-  background: url("./assets/newsletter-image.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding-block: calc(var(--space-4xl) + 100px);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.newsletter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("./assets/newsletter-image.jpg") center / cover no-repeat;
+  transform: scale(1);
+  animation: newsletter-bg-zoom 28s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 .newsletter .container {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
 }
@@ -364,16 +376,81 @@ h2 {
   margin-inline: auto;
 }
 
-/* Types grid — compone ws-image-gallery */
-.types {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-md);
+@keyframes newsletter-bg-zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
 }
 
-.types .ws-image-gallery {
+@media (prefers-reduced-motion: reduce) {
+  .newsletter::before {
+    animation: none;
+    will-change: auto;
+  }
+}
+
+/* Types — fila full-bleed sticky (scroll vertical → horizontal) */
+#tipos .section-head {
+  margin-bottom: var(--space-8);
+}
+
+.types-scroll {
+  position: relative;
+  /* Fallback hasta que JS mida el recorrido horizontal */
+  height: 280vh;
+}
+
+.types-scroll__sticky {
+  position: sticky;
+  top: var(--types-sticky-top, 0px);
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
   width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.types-scroll__row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: var(--space-md);
+  width: max-content;
+  padding-inline: max(
+    var(--space-8),
+    calc((100vw - min(1280px, 100vw)) / 2 + var(--space-8))
+  );
+  will-change: transform;
+}
+
+.types-scroll__row .ws-image-gallery {
+  flex: 0 0 min(42vw, 368px);
+  width: min(42vw, 368px);
   max-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .types-scroll {
+    height: auto;
+  }
+
+  .types-scroll__sticky {
+    position: relative;
+    height: auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .types-scroll__row {
+    will-change: auto;
+    transform: none;
+    padding-block: var(--space-md);
+  }
 }
 
 /* Footer — Figma WellnessStay Components / footer (2178:3752)
@@ -489,10 +566,6 @@ h2 {
     gap: var(--space-xl);
   }
 
-  .types {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .footer-nav {
     flex-basis: 521px;
     width: 521px;
@@ -515,8 +588,9 @@ h2 {
 }
 
 @media (max-width: 560px) {
-  .types {
-    grid-template-columns: 1fr;
+  .types-scroll__row .ws-image-gallery {
+    flex-basis: min(58vw, 280px);
+    width: min(58vw, 280px);
   }
 
   h2 {

@@ -1,5 +1,6 @@
 import "../styles.css";
 import "../css/index.css";
+import "../js/tipos-horizontal-scroll.js";
 import "./preview.css";
 
 /** @type { import('@storybook/html-vite').Preview } */

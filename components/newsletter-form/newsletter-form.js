@@ -1,6 +1,7 @@
 import { escapeHtml } from "../html.js";
 import { renderInput } from "../input/input.js";
 import { renderButton } from "../button/button.js";
+import spaIcon from "./assets/spa-filled.svg?raw";
 
 const DEVICES = ["desktop", "mobile"];
 
@@ -14,6 +15,7 @@ export function renderNewsletterForm({
 } = {}) {
   const safeDevice = DEVICES.includes(device) ? device : "desktop";
   return `<form class="ws-newsletter-form ws-newsletter-form--${safeDevice}" action="#" method="post">
+  <span class="ws-newsletter-form__icon" aria-hidden="true">${spaIcon}</span>
   <p class="ws-newsletter-form__title">${escapeHtml(title)}</p>
   <p class="ws-newsletter-form__text">${escapeHtml(text)}</p>
   <div class="ws-newsletter-form__row">

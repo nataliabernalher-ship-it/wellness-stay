@@ -10,8 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=15" />
-    <link rel="stylesheet" href="./css/index.css?v=28" />
+    <link rel="stylesheet" href="./styles.css?v=25" />
+    <link rel="stylesheet" href="./css/index.css?v=29" />
+    <script src="./js/tipos-horizontal-scroll.js?v=3" defer></script>
   </head>
   <body>
     <header class="site-header site-header--over-media">
@@ -147,7 +148,7 @@
           <div class="section-head">
             <div>
               <h2>Retiros destacados</h2>
-              <p class="section-subtitle">Seis opciones populares para empezar a explorar.</p>
+              <p class="section-subtitle">Ocho opciones populares para empezar a explorar.</p>
             </div>
             <a class="ws-button ws-button--secondary ws-button--small" href="./resultados.html">Ver todos</a>
           </div>
@@ -308,6 +309,58 @@
                 </div>
               </div>
             </article>
+
+            <article class="ws-card">
+              <div class="ws-card__media" data-img="detox">
+                <div class="ws-card__media-top">
+                  <span class="ws-card__tag"><span class="ws-card__tag-icon" aria-hidden="true"></span>Detox</span>
+                  <button class="ws-card__like" type="button" aria-label="Guardar"></button>
+                </div>
+                <span class="ws-card__dots" aria-hidden="true"></span>
+              </div>
+              <div class="ws-card__content">
+                <div class="ws-card__top">
+                  <p class="ws-card__score"><span>9, 2</span><span class="ws-card__score-icon" aria-hidden="true"></span></p>
+                  <h3 class="ws-card__title">Ligereza interior</h3>
+                  <p class="ws-card__location">Girona, España</p>
+                  <p class="ws-card__description">Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                  <p class="ws-card__details">Cancelacion gratuita</p>
+                </div>
+                <div class="ws-card__footer">
+                  <p class="ws-card__extra">Detox</p>
+                  <p class="ws-card__price-group">
+                    <span class="ws-card__price-label">6 noches desde</span>
+                    <span class="ws-card__price">540€</span>
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="ws-card">
+              <div class="ws-card__media" data-img="mindfulness">
+                <div class="ws-card__media-top">
+                  <span class="ws-card__tag"><span class="ws-card__tag-icon" aria-hidden="true"></span>Mindfulness</span>
+                  <button class="ws-card__like" type="button" aria-label="Guardar"></button>
+                </div>
+                <span class="ws-card__dots" aria-hidden="true"></span>
+              </div>
+              <div class="ws-card__content">
+                <div class="ws-card__top">
+                  <p class="ws-card__score"><span>9, 5</span><span class="ws-card__score-icon" aria-hidden="true"></span></p>
+                  <h3 class="ws-card__title">Presencia en el valle</h3>
+                  <p class="ws-card__location">Navarra, España</p>
+                  <p class="ws-card__description">Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                  <p class="ws-card__details">Cancelacion gratuita</p>
+                </div>
+                <div class="ws-card__footer">
+                  <p class="ws-card__extra">Mindfulness</p>
+                  <p class="ws-card__price-group">
+                    <span class="ws-card__price-label">4 noches desde</span>
+                    <span class="ws-card__price">410€</span>
+                  </p>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -320,68 +373,72 @@
               <p class="section-subtitle">Explora por intención: movimiento, descanso, foco o transformación.</p>
             </div>
           </div>
+        </div>
 
-          <div class="types">
-            <a class="ws-image-gallery ws-image-gallery--rectangulo" href="./resultados.html?tipo=yoga" data-img="yoga" aria-label="Retiros de Yoga">
-              <div class="ws-image-gallery__media" aria-hidden="true"></div>
-              <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
-              <div class="ws-image-gallery__content-card">
-                <div class="ws-image-gallery__content">
-                  <h3 class="ws-image-gallery__title">Retiros de Yoga</h3>
-                  <p class="ws-image-gallery__subtitle">Energía y flexibilidad</p>
+        <div class="types-scroll" data-tipos-scroll>
+          <div class="types-scroll__sticky" data-tipos-track>
+            <div class="types-scroll__row" data-tipos-row>
+              <a class="ws-image-gallery ws-image-gallery--alargado" href="./resultados.html?tipo=yoga" data-img="yoga" aria-label="Retiros de Yoga">
+                <div class="ws-image-gallery__media" aria-hidden="true"></div>
+                <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
+                <div class="ws-image-gallery__content-card">
+                  <div class="ws-image-gallery__content">
+                    <h3 class="ws-image-gallery__title">Retiros de Yoga</h3>
+                    <p class="ws-image-gallery__subtitle">Energía y flexibilidad</p>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a class="ws-image-gallery ws-image-gallery--rectangulo" href="./resultados.html?tipo=meditacion" data-img="meditation" aria-label="Retiros de Meditación">
-              <div class="ws-image-gallery__media" aria-hidden="true"></div>
-              <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
-              <div class="ws-image-gallery__content-card">
-                <div class="ws-image-gallery__content">
-                  <h3 class="ws-image-gallery__title">Retiros de Meditación</h3>
-                  <p class="ws-image-gallery__subtitle">Silencio y presencia</p>
+              </a>
+              <a class="ws-image-gallery ws-image-gallery--alargado" href="./resultados.html?tipo=meditacion" data-img="meditation" aria-label="Retiros de Meditación">
+                <div class="ws-image-gallery__media" aria-hidden="true"></div>
+                <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
+                <div class="ws-image-gallery__content-card">
+                  <div class="ws-image-gallery__content">
+                    <h3 class="ws-image-gallery__title">Retiros de Meditación</h3>
+                    <p class="ws-image-gallery__subtitle">Silencio y presencia</p>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a class="ws-image-gallery ws-image-gallery--rectangulo" href="./resultados.html?tipo=detox" data-img="detox" aria-label="Retiros de Detox">
-              <div class="ws-image-gallery__media" aria-hidden="true"></div>
-              <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
-              <div class="ws-image-gallery__content-card">
-                <div class="ws-image-gallery__content">
-                  <h3 class="ws-image-gallery__title">Retiros de Detox</h3>
-                  <p class="ws-image-gallery__subtitle">Ligereza y descanso</p>
+              </a>
+              <a class="ws-image-gallery ws-image-gallery--alargado" href="./resultados.html?tipo=detox" data-img="detox" aria-label="Retiros de Detox">
+                <div class="ws-image-gallery__media" aria-hidden="true"></div>
+                <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
+                <div class="ws-image-gallery__content-card">
+                  <div class="ws-image-gallery__content">
+                    <h3 class="ws-image-gallery__title">Retiros de Detox</h3>
+                    <p class="ws-image-gallery__subtitle">Ligereza y descanso</p>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a class="ws-image-gallery ws-image-gallery--rectangulo" href="./resultados.html?tipo=naturaleza" data-img="nature" aria-label="Retiros de Naturaleza">
-              <div class="ws-image-gallery__media" aria-hidden="true"></div>
-              <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
-              <div class="ws-image-gallery__content-card">
-                <div class="ws-image-gallery__content">
-                  <h3 class="ws-image-gallery__title">Retiros de Naturaleza</h3>
-                  <p class="ws-image-gallery__subtitle">Senderos y aire puro</p>
+              </a>
+              <a class="ws-image-gallery ws-image-gallery--alargado" href="./resultados.html?tipo=naturaleza" data-img="nature" aria-label="Retiros de Naturaleza">
+                <div class="ws-image-gallery__media" aria-hidden="true"></div>
+                <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
+                <div class="ws-image-gallery__content-card">
+                  <div class="ws-image-gallery__content">
+                    <h3 class="ws-image-gallery__title">Retiros de Naturaleza</h3>
+                    <p class="ws-image-gallery__subtitle">Senderos y aire puro</p>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a class="ws-image-gallery ws-image-gallery--rectangulo" href="./resultados.html?tipo=spa" data-img="spa" aria-label="Retiros de Spa">
-              <div class="ws-image-gallery__media" aria-hidden="true"></div>
-              <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
-              <div class="ws-image-gallery__content-card">
-                <div class="ws-image-gallery__content">
-                  <h3 class="ws-image-gallery__title">Retiros de Spa</h3>
-                  <p class="ws-image-gallery__subtitle">Cuerpo y recuperación</p>
+              </a>
+              <a class="ws-image-gallery ws-image-gallery--alargado" href="./resultados.html?tipo=spa" data-img="spa" aria-label="Retiros de Spa">
+                <div class="ws-image-gallery__media" aria-hidden="true"></div>
+                <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
+                <div class="ws-image-gallery__content-card">
+                  <div class="ws-image-gallery__content">
+                    <h3 class="ws-image-gallery__title">Retiros de Spa</h3>
+                    <p class="ws-image-gallery__subtitle">Cuerpo y recuperación</p>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a class="ws-image-gallery ws-image-gallery--rectangulo" href="./resultados.html?tipo=mindfulness" data-img="mindfulness" aria-label="Retiros de Mindfulness">
-              <div class="ws-image-gallery__media" aria-hidden="true"></div>
-              <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
-              <div class="ws-image-gallery__content-card">
-                <div class="ws-image-gallery__content">
-                  <h3 class="ws-image-gallery__title">Retiros de Mindfulness</h3>
-                  <p class="ws-image-gallery__subtitle">Foco y calma</p>
+              </a>
+              <a class="ws-image-gallery ws-image-gallery--alargado" href="./resultados.html?tipo=mindfulness" data-img="mindfulness" aria-label="Retiros de Mindfulness">
+                <div class="ws-image-gallery__media" aria-hidden="true"></div>
+                <div class="ws-image-gallery__scrim" aria-hidden="true"></div>
+                <div class="ws-image-gallery__content-card">
+                  <div class="ws-image-gallery__content">
+                    <h3 class="ws-image-gallery__title">Retiros de Mindfulness</h3>
+                    <p class="ws-image-gallery__subtitle">Foco y calma</p>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -391,6 +448,12 @@
 <!-- Figma: WellnessStay Components / newsletter-form (2217:74)
      Device desktop (2216:68) | mobile (2217:75). El layout móvil lo aplica CSS a 560px. -->
 <form class="ws-newsletter-form" action="#" method="post">
+  <span class="ws-newsletter-form__icon" aria-hidden="true">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.79 9.02C20.58 9.07 15.89 10.14 11.99 15.28C8.02 10.15 3.42 9.07 3.22 9.02C2.92 8.95 2.61 9.02 2.38 9.22C2.26215 9.31313 2.16679 9.43161 2.101 9.56664C2.03521 9.70168 2.00069 9.8498 2 10C2 17.29 5.92 22 12 22C18.08 22 22 17.18 22 10C22 9.7 21.86 9.41 21.63 9.22C21.39 9.03 21.08 8.96 20.79 9.02Z" fill="currentColor"/>
+      <path d="M11.98 13.7C13.53 11.89 15.16 10.65 16.58 9.79C16.09 8.14 15.03 5.74 12.73 3.32C12.35 2.92 11.66 2.92 11.28 3.32C8.97 5.76 7.91 8.16 7.42 9.82C8.82 10.68 10.43 11.92 11.99 13.7H11.98Z" fill="currentColor"/>
+    </svg>
+  </span>
   <p class="ws-newsletter-form__title">Consejos wellness en tu inbox</p>
   <p class="ws-newsletter-form__text">
     Ideas simples para dormir mejor, moverte con intención, comer más consciente y sostener hábitos que sí duran.
